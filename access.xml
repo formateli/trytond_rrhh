@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+<!-- This file is part of tryton-rrhh project for Tryton. The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.model.access" id="access_company_employee_employee">
+            <field name="model" search="[('model', '=', 'company.employee')]"/>
+            <field name="group" ref="rrhh.group_rrhh_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_company_employee">
+            <field name="model" search="[('model', '=', 'company.employee')]"/>
+            <field name="group" ref="rrhh.group_rrhh"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_rrhh_document">
+            <field name="model" search="[('model', '=', 'rrhh.document')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_document_admin">
+            <field name="model" search="[('model', '=', 'rrhh.document')]"/>
+            <field name="group" ref="rrhh.group_rrhh_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_document_user">
+            <field name="model" search="[('model', '=', 'rrhh.document')]"/>
+            <field name="group" ref="rrhh.group_rrhh"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_rrhh_document_type">
+            <field name="model" search="[('model', '=', 'rrhh.document.type')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_document_type_admin">
+            <field name="model" search="[('model', '=', 'rrhh.document.type')]"/>
+            <field name="group" ref="rrhh.group_rrhh_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_document_type_user">
+            <field name="model" search="[('model', '=', 'rrhh.document.type')]"/>
+            <field name="group" ref="rrhh.group_rrhh"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_rrhh_instruction_level">
+            <field name="model" search="[('model', '=', 'rrhh.instruction.level')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_instruction_level_admin">
+            <field name="model" search="[('model', '=', 'rrhh.instruction.level')]"/>
+            <field name="group" ref="rrhh.group_rrhh_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_instruction_level_user">
+            <field name="model" search="[('model', '=', 'rrhh.instruction.level')]"/>
+            <field name="group" ref="rrhh.group_rrhh"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_rrhh_dependent">
+            <field name="model" search="[('model', '=', 'rrhh.dependent')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_dependent_admin">
+            <field name="model" search="[('model', '=', 'rrhh.dependent')]"/>
+            <field name="group" ref="rrhh.group_rrhh_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_dependent_user">
+            <field name="model" search="[('model', '=', 'rrhh.dependent')]"/>
+            <field name="group" ref="rrhh.group_rrhh"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_rrhh_dependent_relation">
+            <field name="model" search="[('model', '=', 'rrhh.dependent.relation')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_dependent_relation_admin">
+            <field name="model" search="[('model', '=', 'rrhh.dependent.relation')]"/>
+            <field name="group" ref="rrhh.group_rrhh_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_dependent_relation_user">
+            <field name="model" search="[('model', '=', 'rrhh.dependent.relation')]"/>
+            <field name="group" ref="rrhh.group_rrhh"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_rrhh_qualification">
+            <field name="model" search="[('model', '=', 'rrhh.qualification')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_qualification_admin">
+            <field name="model" search="[('model', '=', 'rrhh.qualification')]"/>
+            <field name="group" ref="rrhh.group_rrhh_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_qualification_user">
+            <field name="model" search="[('model', '=', 'rrhh.qualification')]"/>
+            <field name="group" ref="rrhh.group_rrhh"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_rrhh_qualification_degree">
+            <field name="model" search="[('model', '=', 'rrhh.qualification.degree')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_qualification_degree_admin">
+            <field name="model" search="[('model', '=', 'rrhh.qualification.degree')]"/>
+            <field name="group" ref="rrhh.group_rrhh_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_qualification_degree_user">
+            <field name="model" search="[('model', '=', 'rrhh.qualification.degree')]"/>
+            <field name="group" ref="rrhh.group_rrhh"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_rrhh_contract_type">
+            <field name="model" search="[('model', '=', 'rrhh.contract.type')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_contract_type_admin">
+            <field name="model" search="[('model', '=', 'rrhh.contract.type')]"/>
+            <field name="group" ref="rrhh.group_rrhh_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_contract_type_user">
+            <field name="model" search="[('model', '=', 'rrhh.contract.type')]"/>
+            <field name="group" ref="rrhh.group_rrhh"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_rrhh_department">
+            <field name="model" search="[('model', '=', 'rrhh.department')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_department_admin">
+            <field name="model" search="[('model', '=', 'rrhh.department')]"/>
+            <field name="group" ref="rrhh.group_rrhh_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_department_user">
+            <field name="model" search="[('model', '=', 'rrhh.department')]"/>
+            <field name="group" ref="rrhh.group_rrhh"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_rrhh_position">
+            <field name="model" search="[('model', '=', 'rrhh.position')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_position_admin">
+            <field name="model" search="[('model', '=', 'rrhh.position')]"/>
+            <field name="group" ref="rrhh.group_rrhh_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_position_user">
+            <field name="model" search="[('model', '=', 'rrhh.position')]"/>
+            <field name="group" ref="rrhh.group_rrhh"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_rrhh_payment_type">
+            <field name="model" search="[('model', '=', 'rrhh.payment.type')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_payment_type_admin">
+            <field name="model" search="[('model', '=', 'rrhh.payment.type')]"/>
+            <field name="group" ref="rrhh.group_rrhh_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_rrhh_payment_type_user">
+            <field name="model" search="[('model', '=', 'rrhh.payment.type')]"/>
+            <field name="group" ref="rrhh.group_rrhh"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+    </data>
+</tryton>

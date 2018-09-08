@@ -1,0 +1,449 @@
+<?xml version="1.0"?>
+<!-- This file is part of tryton-rrhh project for Tryton. The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="res.group" id="group_rrhh">
+            <field name="name">Human Resources</field>
+        </record>
+        <record model="res.group" id="group_rrhh_admin">
+            <field name="name">Human Resources Administration</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_rrhh">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_rrhh"/>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_rrhh_admin">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_rrhh_admin"/>
+        </record>
+
+        <record model="ir.ui.icon" id="rrhh_icon">
+            <field name="name">rrhh</field>
+            <field name="path">icons/rrhh.svg</field>
+        </record>
+
+        <menuitem name="Human Resources" id="menu_rrhh" sequence="5"
+            icon="rrhh"/>
+        <record model="ir.ui.menu-res.group" id="menu_rrhh_group_rrhh">
+            <field name="menu" ref="menu_rrhh"/>
+            <field name="group" ref="group_rrhh"/>
+        </record>
+
+        <menuitem name="Configuration" id="menu_configuration" sequence="5" parent="menu_rrhh"
+            icon="tryton-preferences"/>
+        <record model="ir.ui.menu-res.group" id="menu_configuration_group_rrhh_admin">
+            <field name="menu" ref="menu_configuration"/>
+            <field name="group" ref="group_rrhh_admin"/>
+        </record>
+
+
+        <record model="ir.ui.view" id="document_view_form">
+            <field name="model">rrhh.document</field>
+            <field name="type">form</field>
+            <field name="name">document_form</field>
+        </record>
+        <record model="ir.ui.view" id="document_view_tree">
+            <field name="model">rrhh.document</field>
+            <field name="type">tree</field>
+            <field name="name">document_tree</field>
+        </record>
+
+
+        <record model="ir.ui.view" id="document_type_view_form">
+            <field name="model">rrhh.document.type</field>
+            <field name="type">form</field>
+            <field name="name">document_type_form</field>
+        </record>
+        <record model="ir.ui.view" id="document_type_view_tree">
+            <field name="model">rrhh.document.type</field>
+            <field name="type">tree</field>
+            <field name="name">document_type_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_document_type_form">
+            <field name="name">Document types</field>
+            <field name="res_model">rrhh.document.type</field>
+            <field name="search_value"></field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_document_type_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="document_type_view_tree"/>
+            <field name="act_window" ref="act_document_type_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_document_type_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="document_type_view_form"/>
+            <field name="act_window" ref="act_document_type_form"/>
+        </record>
+
+        <menuitem name="Document type" id="menu_document_type" sequence="3" action="act_document_type_form"
+            parent="menu_configuration"/>
+
+
+        <record model="ir.ui.view" id="instruction_view_form">
+            <field name="model">rrhh.instruction.level</field>
+            <field name="type">form</field>
+            <field name="name">instruction_level_form</field>
+        </record>
+        <record model="ir.ui.view" id="instruction_view_tree">
+            <field name="model">rrhh.instruction.level</field>
+            <field name="type">tree</field>
+            <field name="name">instruction_level_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_instruction_form">
+            <field name="name">Instruction levels</field>
+            <field name="res_model">rrhh.instruction.level</field>
+            <field name="search_value"></field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_instruction_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="instruction_view_tree"/>
+            <field name="act_window" ref="act_instruction_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_instruction_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="instruction_view_form"/>
+            <field name="act_window" ref="act_instruction_form"/>
+        </record>
+
+        <menuitem name="Instruction level" id="menu_instruction_level" sequence="5" action="act_instruction_form"
+            parent="menu_configuration"/>
+
+
+        <record model="ir.ui.view" id="dependent_view_form">
+            <field name="model">rrhh.dependent</field>
+            <field name="type">form</field>
+            <field name="name">dependent_form</field>
+        </record>
+        <record model="ir.ui.view" id="dependent_view_tree">
+            <field name="model">rrhh.dependent</field>
+            <field name="type">tree</field>
+            <field name="name">dependent_tree</field>
+        </record>
+
+
+        <record model="ir.ui.view" id="dependent_relation_view_form">
+            <field name="model">rrhh.dependent.relation</field>
+            <field name="type">form</field>
+            <field name="name">dependent_relation_form</field>
+        </record>
+        <record model="ir.ui.view" id="dependent_relation_view_tree">
+            <field name="model">rrhh.dependent.relation</field>
+            <field name="type">tree</field>
+            <field name="name">dependent_relation_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_dependent_relation_form">
+            <field name="name">Dependent relation</field>
+            <field name="res_model">rrhh.dependent.relation</field>
+            <field name="search_value"></field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_dependent_relation_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="dependent_relation_view_tree"/>
+            <field name="act_window" ref="act_dependent_relation_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_dependent_relation_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="dependent_relation_view_form"/>
+            <field name="act_window" ref="act_dependent_relation_form"/>
+        </record>
+
+        <menuitem name="Dependent relations" id="menu_dependent_relation" sequence="10" 
+            action="act_dependent_relation_form" parent="menu_configuration"/>
+
+
+        <record model="ir.ui.view" id="qualification_view_form">
+            <field name="model">rrhh.qualification</field>
+            <field name="type">form</field>
+            <field name="name">qualification_form</field>
+        </record>
+        <record model="ir.ui.view" id="qualification_view_tree">
+            <field name="model">rrhh.qualification</field>
+            <field name="type">tree</field>
+            <field name="name">qualification_tree</field>
+        </record>
+
+
+        <record model="ir.ui.view" id="qualification_degree_view_form">
+            <field name="model">rrhh.qualification.degree</field>
+            <field name="type">form</field>
+            <field name="name">qualification_degree_form</field>
+        </record>
+        <record model="ir.ui.view" id="qualification_degree_view_tree">
+            <field name="model">rrhh.qualification.degree</field>
+            <field name="type">tree</field>
+            <field name="name">qualification_degree_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_qualification_degree_form">
+            <field name="name">Qualification degree</field>
+            <field name="res_model">rrhh.qualification.degree</field>
+            <field name="search_value"></field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_qualification_degree_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="qualification_degree_view_tree"/>
+            <field name="act_window" ref="act_qualification_degree_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_qualification_degree_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="qualification_degree_view_form"/>
+            <field name="act_window" ref="act_qualification_degree_form"/>
+        </record>
+
+        <menuitem name="Qualifications degrees" id="menu_qualification_degree" sequence="15" 
+            action="act_qualification_degree_form" parent="menu_configuration"/>
+
+
+        <record model="ir.ui.view" id="contract_type_view_form">
+            <field name="model">rrhh.contract.type</field>
+            <field name="type">form</field>
+            <field name="name">contract_type_form</field>
+        </record>
+        <record model="ir.ui.view" id="contract_type_view_tree">
+            <field name="model">rrhh.contract.type</field>
+            <field name="type">tree</field>
+            <field name="name">contract_type_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_contract_type_form">
+            <field name="name">Contract type</field>
+            <field name="res_model">rrhh.contract.type</field>
+            <field name="search_value"></field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_contract_type_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="contract_type_view_tree"/>
+            <field name="act_window" ref="act_contract_type_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_contract_type_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="contract_type_view_form"/>
+            <field name="act_window" ref="act_contract_type_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_contract_type_list_domain_all">
+            <field name="name">Contract types</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" 
+                eval="[If (Eval('context', {}).get('company', False),
+                  ('company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
+                  ('company', '!=', None))]"
+                pyson="1"/>                
+            <field name="act_window" ref="act_contract_type_form"/>
+        </record>
+
+        <menuitem name="Contract types" id="menu_contract_type" sequence="30" action="act_contract_type_form"
+            parent="menu_configuration"/>
+
+
+        <record model="ir.ui.view" id="payment_type_view_form">
+            <field name="model">rrhh.payment.type</field>
+            <field name="type">form</field>
+            <field name="name">payment_type_form</field>
+        </record>
+        <record model="ir.ui.view" id="payment_type_view_tree">
+            <field name="model">rrhh.payment.type</field>
+            <field name="type">tree</field>
+            <field name="name">payment_type_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_payment_type_form">
+            <field name="name">Payment type</field>
+            <field name="res_model">rrhh.payment.type</field>
+            <field name="search_value"></field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_payment_type_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="payment_type_view_tree"/>
+            <field name="act_window" ref="act_payment_type_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_payment_type_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="payment_type_view_form"/>
+            <field name="act_window" ref="act_payment_type_form"/>
+        </record>
+
+        <menuitem name="Payment types" id="menu_payment_type" sequence="35" action="act_payment_type_form"
+            parent="menu_configuration"/>
+
+
+        <menuitem name="Organization" id="menu_organization" sequence="40" 
+            parent="menu_configuration"/>
+
+        <record model="ir.ui.view" id="department_view_form">
+            <field name="model">rrhh.department</field>
+            <field name="type">form</field>
+            <field name="name">department_form</field>
+        </record>
+        <record model="ir.ui.view" id="department_view_tree">
+            <field name="model">rrhh.department</field>
+            <field name="type">tree</field>
+            <field name="field_childs">childs</field>
+            <field name="name">department_tree</field>
+        </record>
+        <record model="ir.ui.view" id="department_view_list">
+            <field name="model">rrhh.department</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="10"/>
+            <field name="name">department_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_department_tree">
+            <field name="name">Departments</field>
+            <field name="res_model">rrhh.department</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_department_tree_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="department_view_tree"/>
+            <field name="act_window" ref="act_department_tree"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_department_tree_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="department_view_form"/>
+            <field name="act_window" ref="act_department_tree"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_department_tree_domain_all">
+            <field name="name">Departments</field>
+            <field name="sequence" eval="10"/>  
+            <field name="domain" 
+                eval="[('parent', '=', None), 
+                  If (Eval('context', {}).get('company', False),
+                    ('company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
+                    ('company', '!=', None))]"
+                pyson="1"/>
+            <field name="act_window" ref="act_department_tree"/>
+        </record>
+
+        <menuitem parent="menu_organization" action="act_department_tree"
+            id="menu_department_tree"  sequence="10" />
+
+        <record model="ir.action.act_window" id="act_department_list">
+            <field name="name">Departments</field>
+            <field name="res_model">rrhh.department</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_department_list_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="department_view_list"/>
+            <field name="act_window" ref="act_department_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_department_list_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="department_view_form"/>
+            <field name="act_window" ref="act_department_list"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_department_list_domain_all">
+            <field name="name">Departments</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" 
+                eval="[If (Eval('context', {}).get('company', False),
+                  ('company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
+                  ('company', '!=', None))]"
+                pyson="1"/>
+            <field name="act_window" ref="act_department_list"/>
+        </record>
+
+        <menuitem parent="menu_department_tree" action="act_department_list"
+            id="menu_department_list"/>
+
+
+        <record model="ir.ui.view" id="position_view_form">
+            <field name="model">rrhh.position</field>
+            <field name="type">form</field>
+            <field name="name">position_form</field>
+        </record>
+        <record model="ir.ui.view" id="position_view_tree">
+            <field name="model">rrhh.position</field>
+            <field name="type">tree</field>
+            <field name="field_childs">childs</field>
+            <field name="name">position_tree</field>
+        </record>
+        <record model="ir.ui.view" id="position_view_list">
+            <field name="model">rrhh.position</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="10"/>
+            <field name="name">position_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_position_tree">
+            <field name="name">Positions</field>
+            <field name="res_model">rrhh.position</field>
+            <field name="domain" 
+                eval="[('parent', '=', None)]"
+                pyson="1"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_position_tree_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="position_view_tree"/>
+            <field name="act_window" ref="act_position_tree"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_position_tree_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="position_view_form"/>
+            <field name="act_window" ref="act_position_tree"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_position_tree_domain_all">
+            <field name="name">Positions</field>
+            <field name="sequence" eval="10"/>  
+            <field name="domain" 
+                eval="[('parent', '=', None), 
+                  If (Eval('context', {}).get('company', False),
+                    ('department.company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
+                    ('department', '!=', None))]"
+                pyson="1"/>                    
+            <field name="act_window" ref="act_position_tree"/>
+        </record>
+
+        <menuitem parent="menu_organization" action="act_position_tree"
+            id="menu_position_tree"  sequence="20" />
+
+        <record model="ir.action.act_window" id="act_position_list">
+            <field name="name">Positions</field>
+            <field name="res_model">rrhh.position</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_position_list_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="position_view_list"/>
+            <field name="act_window" ref="act_position_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_position_list_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="position_view_form"/>
+            <field name="act_window" ref="act_position_list"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_position_list_domain_all">
+            <field name="name">Positions</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" 
+                eval="[If (Eval('context', {}).get('company', False),
+                  ('department.company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
+                  ('department', '!=', None))]"
+                pyson="1"/>
+            <field name="act_window" ref="act_position_list"/>
+        </record>
+
+        <menuitem parent="menu_position_tree" action="act_position_list"
+            id="menu_position_list"/>
+
+
+        <record model="ir.ui.view" id="employee_view_form">
+            <field name="model">company.employee</field>
+            <field name="inherit" ref="company.employee_view_form"/>
+            <field name="name">employee_form</field>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_employee_domain_all">
+            <field name="name">Employees</field>
+            <field name="sequence" eval="10"/>            
+            <field name="domain" 
+                eval="[If (Eval('context', {}).get('company', False),
+                  ('company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
+                  ('company', '!=', None))]"
+                pyson="1"/>
+            <field name="act_window" ref="company.act_employee_form"/>
+        </record>
+
+        <menuitem name="Employees" id="menu_employee" sequence="20" action="company.act_employee_form"
+            parent="menu_rrhh"/>
+
+    </data>
+</tryton>
