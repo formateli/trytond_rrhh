@@ -30,7 +30,8 @@ class Employee:
     first_name = fields.Char('First name', required=True)
     middle_name = fields.Char('Middle name')
     last_name = fields.Char('Last name', required=True)
-    photo = fields.Binary('Photo')
+    photo = fields.Binary('Photo', file_id='photo_id')
+    photo_id = fields.Char('Photo id', states={'invisible': True})
     position = fields.Many2One('rrhh.position', 'Position', required=True, 
         domain=[('department.company', '=', Eval('company'))],
         depends=['company'])
