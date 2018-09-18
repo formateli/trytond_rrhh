@@ -180,7 +180,7 @@ class Position(ModelSQL, ModelView):
         self.parent = None
 
     def get_rec_name(self, name):
-        return self.department.name + '/' + self.name
+        return self.department.name + ' / ' + self.name
 
     @classmethod
     def search_rec_name(cls, name, clause):

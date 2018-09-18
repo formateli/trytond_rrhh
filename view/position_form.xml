@@ -10,8 +10,6 @@ this repository contains the full copyright notices and license terms. -->
     <field name="department"/>
     <label name="parent"/>   
     <field name="parent"/>
-    <label name="company"/>
-    <field name="company"/>
     <newline/>
     <label name="description"/>
     <field name="description" colspan="3"/>

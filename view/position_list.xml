@@ -5,6 +5,5 @@ this repository contains the full copyright notices and license terms. -->
     <field name="name"/>
     <field name="parent"/>
     <field name="department"/>
-    <field name="company"/>
     <field name="active"/>
 </tree>
