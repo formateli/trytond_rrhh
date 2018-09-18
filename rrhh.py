@@ -214,12 +214,12 @@ class Document(ModelSQL, ModelView):
 
     employee = fields.Many2One('company.employee', 'Employee', required=True)
     type = fields.Many2One('rrhh.document.type', 'Type', required=True)
-    copy = fields.Binary('Copy')
+    copy = fields.Binary('Copy', file_id='copy_id')
+    copy_id = fields.Char('Copy id', states={'invisible': True})
     country = fields.Many2One('country.country', 'Country', required=True)
     description = fields.Char('Number', help="Document description or number")
     date_issue = fields.Date('Issue date')
     date_expiration = fields.Date('Expiration date')
-    mandatory = fields.Boolean('Mandatory')
     notes = fields.Text('Notes')
 
     @classmethod
