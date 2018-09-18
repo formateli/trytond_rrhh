@@ -19,7 +19,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="date_expiration"/>
         </group>
         <group string="Copy" id="copy">
-            <field xfill="0" xexpand="1" name="copy" 
+            <field xfill="0" xexpand="1" name="copy_image" 
                 height="200" width="200" widget="image"  colspan="4"/>
         </group>   
     </group>

@@ -215,7 +215,7 @@ class Document(ModelSQL, ModelView):
 
     employee = fields.Many2One('company.employee', 'Employee', required=True)
     type = fields.Many2One('rrhh.document.type', 'Type', required=True)
-    copy = fields.Binary('Copy', file_id='copy_id')
+    copy_image = fields.Binary('Copy', file_id='copy_id')
     copy_id = fields.Char('Copy id', states={'invisible': True})
     country = fields.Many2One('country.country', 'Country', required=True)
     description = fields.Char('Number', help="Document description or number")
@@ -232,10 +232,6 @@ class Document(ModelSQL, ModelView):
                 Unique(t, t.employee, t.type, t.country),
                 'Employee document must be uniq per type and country!'),
         ]
-
-    @staticmethod
-    def default_mandatory():
-        return False
 
     def get_rec_name(self, name):
         return self.type.rec_name
