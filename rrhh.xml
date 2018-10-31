@@ -76,7 +76,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_document_type_form"/>
         </record>
 
-        <menuitem name="Document type" id="menu_document_type" sequence="3" action="act_document_type_form"
+        <menuitem name="Document type" id="menu_document_type"
+            sequence="10" action="act_document_type_form"
             parent="menu_configuration"/>
 
 
@@ -106,7 +107,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_instruction_form"/>
         </record>
 
-        <menuitem name="Instruction level" id="menu_instruction_level" sequence="5" action="act_instruction_form"
+        <menuitem name="Instruction level" id="menu_instruction_level"
+            sequence="15" action="act_instruction_form"
             parent="menu_configuration"/>
 
 
@@ -148,7 +150,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_dependent_relation_form"/>
         </record>
 
-        <menuitem name="Dependent relations" id="menu_dependent_relation" sequence="10" 
+        <menuitem name="Dependent relations" id="menu_dependent_relation"
+            sequence="20" 
             action="act_dependent_relation_form" parent="menu_configuration"/>
 
 
@@ -190,7 +193,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_qualification_degree_form"/>
         </record>
 
-        <menuitem name="Qualifications degrees" id="menu_qualification_degree" sequence="15" 
+        <menuitem name="Qualifications degrees" id="menu_qualification_degree"
+            sequence="25" 
             action="act_qualification_degree_form" parent="menu_configuration"/>
 
 
@@ -230,7 +234,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_contract_type_form"/>
         </record>
 
-        <menuitem name="Contract types" id="menu_contract_type" sequence="30" action="act_contract_type_form"
+        <menuitem name="Contract types" id="menu_contract_type"
+            sequence="30" action="act_contract_type_form"
             parent="menu_configuration"/>
 
 
@@ -260,11 +265,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_payment_type_form"/>
         </record>
 
-        <menuitem name="Payment types" id="menu_payment_type" sequence="35" action="act_payment_type_form"
+        <menuitem name="Payment types" id="menu_payment_type"
+            sequence="40" action="act_payment_type_form"
             parent="menu_configuration"/>
 
 
-        <menuitem name="Organization" id="menu_organization" sequence="40" 
+        <menuitem name="Organization" id="menu_organization"
+            sequence="50" 
             parent="menu_configuration"/>
 
         <record model="ir.ui.view" id="department_view_form">
