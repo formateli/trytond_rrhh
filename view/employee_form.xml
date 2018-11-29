@@ -6,7 +6,7 @@ this repository contains the full copyright notices and license terms. -->
         <notebook colspan="4">
             <page string="Personal info" col="4" id="personal">
                 <group id="person_details" colspan="4">
-                    <group id="person_name">
+                    <group id="person_name" colspan="2">
                         <label name="first_name"/>
                         <field name="first_name"/>
                         <label name="middle_name"/>
@@ -30,7 +30,7 @@ this repository contains the full copyright notices and license terms. -->
                         <label name="residence"/>
                         <field name="residence"/>
                     </group>
-                    <group string="Picture" id="person_picture">
+                    <group id="person_picture"  colspan="2">
                         <field xfill="0" xexpand="1" name="photo" 
                                     height="200" width="200" widget="image"/>
                     </group>
