@@ -2,21 +2,21 @@
 #this repository contains the full copyright notices and license terms.
 
 from trytond.pool import Pool
-from .rrhh import *
+from . import rrhh
 
 
 def register():
     Pool.register(
-        Employee,
-        Department,
-        Position,
-        InstructionLevel,
-        DocumentType,
-        Document,
-        DependentRelation,
-        Dependent,
-        QualificationDegree,
-        Qualification,
-        ContractType, 
-        PaymentType,
+        rrhh.Employee,
+        rrhh.Department,
+        rrhh.Position,
+        rrhh.InstructionLevel,
+        rrhh.DocumentType,
+        rrhh.Document,
+        rrhh.DependentRelation,
+        rrhh.Dependent,
+        rrhh.QualificationDegree,
+        rrhh.Qualification,
+        rrhh.ContractType, 
+        rrhh.PaymentType,
         module='rrhh', type_='model')
