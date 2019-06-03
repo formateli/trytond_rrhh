@@ -31,7 +31,7 @@ this repository contains the full copyright notices and license terms. -->
         </record>
 
         <menuitem name="Configuration" id="menu_configuration" sequence="5" parent="menu_rrhh"
-            icon="tryton-preferences"/>
+            icon="tryton-settings"/>
         <record model="ir.ui.menu-res.group" id="menu_configuration_group_rrhh_admin">
             <field name="menu" ref="menu_configuration"/>
             <field name="group" ref="group_rrhh_admin"/>
