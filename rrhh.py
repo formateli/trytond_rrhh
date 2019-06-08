@@ -25,10 +25,7 @@ __all__ = [
 
 class Employee(metaclass=PoolMeta):
     __name__ = 'company.employee'
-  
-    first_name = fields.Char('First name', required=True)
-    middle_name = fields.Char('Middle name')
-    last_name = fields.Char('Last name', required=True)
+
     photo = fields.Binary('Photo', file_id='photo_id')
     photo_id = fields.Char('Photo id', states={'invisible': True})
     position = fields.Many2One('rrhh.position', 'Position', required=True, 
@@ -65,6 +62,17 @@ class Employee(metaclass=PoolMeta):
     residence = fields.Many2One('country.country', 'Country of residence', required=True)
     age = fields.Function(fields.Char('Age'), 'get_age')
     dependents = fields.One2Many('rrhh.dependent', 'employee', 'Dependents')
+
+    @classmethod
+    def __register__(cls, module_name):
+        super(Employee, cls).__register__(module_name)
+
+        table = cls.__table_handler__(module_name)
+        # To 5.2
+        if table.column_exist('first_name'):
+            table.drop_column('first_name')
+            table.drop_column('middle_name')
+            table.drop_column('last_name')
 
     @staticmethod
     def default_company():
