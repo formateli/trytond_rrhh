@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<!-- This file is part of tryton-rrhh project for Tryton. The COPYRIGHT file at the top level of
-this repository contains the full copyright notices and license terms. -->
+<!-- The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
 <form>
     <group id="doc_details" colspan="4">
         <group id="person_name">
@@ -19,9 +19,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="date_expiration"/>
         </group>
         <group string="Copy" id="copy">
-            <field xfill="0" xexpand="1" name="copy_image" 
+            <field xfill="0" xexpand="1" name="copy_image"
                 height="200" width="200" widget="image"  colspan="4"/>
-        </group>   
+        </group>
     </group>
     <group id="doc_notes" string="Notes" colspan="4">
         <field name="notes" colspan="4"/>

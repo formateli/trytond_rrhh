@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<!-- This file is part of tryton-rrhh project for Tryton. The COPYRIGHT file at the top level of
-this repository contains the full copyright notices and license terms. -->
+<!-- The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
 <form>
     <label name="name"/>
     <field name="name"/>
@@ -8,7 +8,7 @@ this repository contains the full copyright notices and license terms. -->
     <field name="active"/>
     <label name="department"/>
     <field name="department"/>
-    <label name="parent"/>   
+    <label name="parent"/>
     <field name="parent"/>
     <newline/>
     <label name="description"/>

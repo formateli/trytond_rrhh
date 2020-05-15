@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<!-- This file is part of tryton-rrhh project for Tryton. The COPYRIGHT file at the top level of
-this repository contains the full copyright notices and license terms. -->
+<!-- The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
 <tryton>
     <data>
         <record model="res.group" id="group_rrhh">
@@ -151,7 +151,7 @@ this repository contains the full copyright notices and license terms. -->
         </record>
 
         <menuitem name="Dependent relations" id="menu_dependent_relation"
-            sequence="20" 
+            sequence="20"
             action="act_dependent_relation_form" parent="menu_configuration"/>
 
 
@@ -194,7 +194,7 @@ this repository contains the full copyright notices and license terms. -->
         </record>
 
         <menuitem name="Qualifications degrees" id="menu_qualification_degree"
-            sequence="25" 
+            sequence="25"
             action="act_qualification_degree_form" parent="menu_configuration"/>
 
 
@@ -226,11 +226,11 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.action.act_window.domain" id="act_contract_type_list_domain_all">
             <field name="name">Contract types</field>
             <field name="sequence" eval="10"/>
-            <field name="domain" 
+            <field name="domain"
                 eval="[If (Eval('context', {}).get('company', False),
                   ('company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
                   ('company', '!=', None))]"
-                pyson="1"/>                
+                pyson="1"/>
             <field name="act_window" ref="act_contract_type_form"/>
         </record>
 
@@ -271,7 +271,7 @@ this repository contains the full copyright notices and license terms. -->
 
 
         <menuitem name="Organization" id="menu_organization"
-            sequence="50" 
+            sequence="50"
             parent="menu_configuration"/>
 
         <record model="ir.ui.view" id="department_view_form">
@@ -309,9 +309,9 @@ this repository contains the full copyright notices and license terms. -->
 
         <record model="ir.action.act_window.domain" id="act_department_tree_domain_all">
             <field name="name">Departments</field>
-            <field name="sequence" eval="10"/>  
-            <field name="domain" 
-                eval="[('parent', '=', None), 
+            <field name="sequence" eval="10"/>
+            <field name="domain"
+                eval="[('parent', '=', None),
                   If (Eval('context', {}).get('company', False),
                     ('company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
                     ('company', '!=', None))]"
@@ -340,7 +340,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.action.act_window.domain" id="act_department_list_domain_all">
             <field name="name">Departments</field>
             <field name="sequence" eval="10"/>
-            <field name="domain" 
+            <field name="domain"
                 eval="[If (Eval('context', {}).get('company', False),
                   ('company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
                   ('company', '!=', None))]"
@@ -373,7 +373,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.action.act_window" id="act_position_tree">
             <field name="name">Positions</field>
             <field name="res_model">rrhh.position</field>
-            <field name="domain" 
+            <field name="domain"
                 eval="[('parent', '=', None)]"
                 pyson="1"/>
         </record>
@@ -390,13 +390,13 @@ this repository contains the full copyright notices and license terms. -->
 
         <record model="ir.action.act_window.domain" id="act_position_tree_domain_all">
             <field name="name">Positions</field>
-            <field name="sequence" eval="10"/>  
-            <field name="domain" 
-                eval="[('parent', '=', None), 
+            <field name="sequence" eval="10"/>
+            <field name="domain"
+                eval="[('parent', '=', None),
                   If (Eval('context', {}).get('company', False),
                     ('department.company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
                     ('department', '!=', None))]"
-                pyson="1"/>                    
+                pyson="1"/>
             <field name="act_window" ref="act_position_tree"/>
         </record>
 
@@ -421,7 +421,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.action.act_window.domain" id="act_position_list_domain_all">
             <field name="name">Positions</field>
             <field name="sequence" eval="10"/>
-            <field name="domain" 
+            <field name="domain"
                 eval="[If (Eval('context', {}).get('company', False),
                   ('department.company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
                   ('department', '!=', None))]"
@@ -440,8 +440,8 @@ this repository contains the full copyright notices and license terms. -->
         </record>
         <record model="ir.action.act_window.domain" id="act_employee_domain_all">
             <field name="name">Employees</field>
-            <field name="sequence" eval="10"/>            
-            <field name="domain" 
+            <field name="sequence" eval="10"/>
+            <field name="domain"
                 eval="[If (Eval('context', {}).get('company', False),
                   ('company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
                   ('company', '!=', None))]"

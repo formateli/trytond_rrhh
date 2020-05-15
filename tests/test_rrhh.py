@@ -1,12 +1,10 @@
-# This file is part of tryton-corseg module. The COPYRIGHT file at the top level of
-# this repository contains the full copyright notices and license terms.
-
+# The COPYRIGHT file at the top level of this repository contains
+# the full copyright notices and license terms.
 import unittest
 import trytond.tests.test_tryton
 from trytond.pool import Pool
 from trytond.tests.test_tryton import ModuleTestCase, with_transaction
 from trytond.modules.company.tests import create_company, set_company
-from trytond.exceptions import UserError
 
 
 class RRHHTestCase(ModuleTestCase):

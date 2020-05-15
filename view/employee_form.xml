@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
-<!-- This file is part of tryton-rrhh project for Tryton. The COPYRIGHT file at the top level of
-this repository contains the full copyright notices and license terms. -->
+<!-- The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
 <data>
+    <xpath expr="/form/label[@name='supervisor']" position="replace"/>
+    <xpath expr="/form/field[@name='supervisor']" position="replace"/>
     <xpath expr="/form/field[@name='end_date']" position="after">
         <notebook colspan="4">
             <page string="Personal info" col="4" id="personal">
@@ -25,7 +27,7 @@ this repository contains the full copyright notices and license terms. -->
                         <field name="residence"/>
                     </group>
                     <group id="person_picture"  colspan="2">
-                        <field xfill="0" xexpand="1" name="photo" 
+                        <field xfill="0" xexpand="1" name="photo"
                                     height="200" width="200" widget="image"/>
                     </group>
                 </group>
