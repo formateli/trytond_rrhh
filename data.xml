@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
+<tryton>
+    <data noupdate="1">
+        <!-- Dependent relation -->
+        <record id="rrhh_dependent_relation_mother" model="rrhh.dependent.relation">
+            <field name="name">Mother</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="rrhh_dependent_relation_father" model="rrhh.dependent.relation">
+            <field name="name">Father</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="rrhh_dependent_relation_son" model="rrhh.dependent.relation">
+            <field name="name">Son</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="rrhh_dependent_relation_daughter" model="rrhh.dependent.relation">
+            <field name="name">Daughter</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="rrhh_dependent_relation_grandmother" model="rrhh.dependent.relation">
+            <field name="name">Grandmother</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="rrhh_dependent_relation_grandfather" model="rrhh.dependent.relation">
+            <field name="name">Grandfather</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="rrhh_dependent_relation_grandson" model="rrhh.dependent.relation">
+            <field name="name">Grandson</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="rrhh_dependent_relation_granddaughter" model="rrhh.dependent.relation">
+            <field name="name">Granddaughter</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="rrhh_dependent_relation_wife" model="rrhh.dependent.relation">
+            <field name="name">Wife</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="rrhh_dependent_relation_husband" model="rrhh.dependent.relation">
+            <field name="name">Husband</field>
+            <field name="active" eval="True"/>
+        </record>
+
+        <!-- instruction level -->
+        <record id="rrhh_instruction_level_none" model="rrhh.instruction.level">
+            <field name="name">None</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="rrhh_instruction_level_elementary_school" model="rrhh.instruction.level">
+            <field name="name">Elementary school</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="rrhh_instruction_level_high_school" model="rrhh.instruction.level">
+            <field name="name">High school</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="rrhh_instruction_level_university" model="rrhh.instruction.level">
+            <field name="name">University</field>
+            <field name="active" eval="True"/>
+        </record>
+
+        <!-- Document type -->
+        <record id="rrhh_document_type_passport" model="rrhh.document.type">
+            <field name="name">Passport</field>
+        </record>
+        <record id="rrhh_document_type_driver_license" model="rrhh.document.type">
+            <field name="name">Driver license</field>
+        </record>
+        <record id="rrhh_document_type_social_security" model="rrhh.document.type">
+            <field name="name">Social security</field>
+        </record>
+        <record id="rrhh_document_type_national_id" model="rrhh.document.type">
+            <field name="name">National ID</field>
+        </record>
+
+        <!-- Payment types -->
+        <record id="payment_type_cash" model="rrhh.payment.type">
+            <field name="name">Cash</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="payment_type_ach" model="rrhh.payment.type">
+            <field name="name">ACH</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="payment_type_check" model="rrhh.payment.type">
+            <field name="name">Check</field>
+            <field name="active" eval="True"/>
+        </record>
+    </data>
+</tryton>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
+<form>
+    <label name="name"/>
+    <field name="name"/>
+    <label name="type"/>
+    <field name="type"/>
+    <label name="degree"/>
+    <field name="degree"/>
+    <newline/>
+    <label name="notes"/>
+    <field name="notes" colspan="3"/>
+</form>

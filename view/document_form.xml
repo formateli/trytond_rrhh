@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
+<form>
+    <group id="doc_details" colspan="4">
+        <group id="person_name">
+            <label name="type"/>
+            <field name="type" colspan="2"/>
+            <newline/>
+            <label name="description"/>
+            <field name="description" colspan="2"/>
+            <newline/>
+            <label name="country"/>
+            <field name="country" colspan="2"/>
+            <newline/>
+            <label name="date_issue"/>
+            <field name="date_issue"/>
+            <label name="date_expiration"/>
+            <field name="date_expiration"/>
+        </group>
+        <group string="Copy" id="copy">
+            <field xfill="0" xexpand="1" name="copy_image"
+                height="200" width="200" widget="image"  colspan="4"/>
+        </group>
+    </group>
+    <group id="doc_notes" string="Notes" colspan="4">
+        <field name="notes" colspan="4"/>
+    </group>
+</form>
