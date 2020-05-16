@@ -43,11 +43,6 @@ class Employee(metaclass=PoolMeta):
     documents = fields.One2Many('rrhh.document', 'employee', 'Documents')
     qualifications = fields.One2Many('rrhh.qualification',
         'employee', 'Qualification')
-    #supervisor = fields.Many2One('company.employee', 'Supervisor',
-    #    domain=[('company', '=', Eval('company'))],
-    #    depends=['company'])
-    #subordinates = fields.One2Many('company.employee', 'supervisor',
-    #    'Subordinates', readonly=True)
     marital_status = fields.Selection([
         ('single', 'Single'),
         ('married', 'Married'),
@@ -59,13 +54,13 @@ class Employee(metaclass=PoolMeta):
         ('male', 'Male'),
         ('female', 'Female'),
         ], 'Genre', required=True)
-    birth_date = fields.Date('Birth date', required=True)
+    birth_date = fields.Date('Birth date', states={'required': True})
     birth_country = fields.Many2One('country.country',
-        'Country of birth', required=True)
+        'Country of birth', states={'required': True})
     nationality = fields.Many2One('country.country',
-        'Nationality', required=True)
+        'Nationality', states={'required': True})
     residence = fields.Many2One('country.country',
-        'Country of residence', required=True)
+        'Country of residence', states={'required': True})
     age = fields.Function(fields.Char('Age'), 'get_age')
     dependents = fields.One2Many('rrhh.dependent', 'employee', 'Dependents')
 
