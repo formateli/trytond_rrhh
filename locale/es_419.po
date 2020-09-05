@@ -16,7 +16,7 @@ msgstr "Fecha de Nacimiento"
 
 msgctxt "field:company.employee,contract_type:"
 msgid "Contract type"
-msgstr "Tipo de contrato"
+msgstr "Tipo de Contrato"
 
 msgctxt "field:company.employee,department:"
 msgid "Department"
@@ -37,11 +37,11 @@ msgstr "Género"
 
 msgctxt "field:company.employee,instruction_level:"
 msgid "Instruction level"
-msgstr "Nivel de instrucción"
+msgstr "Nivel de Instrucción"
 
 msgctxt "field:company.employee,marital_status:"
 msgid "Marital status"
-msgstr "Estado civil"
+msgstr "Estado Civil"
 
 msgctxt "field:company.employee,nationality:"
 msgid "Nationality"
@@ -49,7 +49,7 @@ msgstr "Nacionalidad"
 
 msgctxt "field:company.employee,payment_type:"
 msgid "Payment type"
-msgstr "Tipo de pago"
+msgstr "Tipo de Pago"
 
 msgctxt "field:company.employee,photo:"
 msgid "Photo"
@@ -57,7 +57,7 @@ msgstr "Foto"
 
 msgctxt "field:company.employee,photo_id:"
 msgid "Photo id"
-msgstr "Identificación fotográfica"
+msgstr "Identificación Fotográfica"
 
 msgctxt "field:company.employee,position:"
 msgid "Position"
@@ -69,7 +69,7 @@ msgstr "Calificación"
 
 msgctxt "field:company.employee,residence:"
 msgid "Country of residence"
-msgstr "País de residencia"
+msgstr "País de Residencia"
 
 #, fuzzy
 msgctxt "field:rrhh.contract.type,company:"
@@ -92,7 +92,7 @@ msgstr "Activo"
 
 msgctxt "field:rrhh.department,childs:"
 msgid "Children"
-msgstr "Niños"
+msgstr "Hijos"
 
 #, fuzzy
 msgctxt "field:rrhh.department,company:"
@@ -110,7 +110,7 @@ msgstr "Padre"
 
 msgctxt "field:rrhh.department,positions:"
 msgid "Positions"
-msgstr "Positions"
+msgstr "Posiciones"
 
 msgctxt "field:rrhh.dependent,age:"
 msgid "Age"
@@ -118,7 +118,7 @@ msgstr "Edad"
 
 msgctxt "field:rrhh.dependent,birth_date:"
 msgid "Birth date"
-msgstr "Fecha de nacimiento"
+msgstr "Fecha de Nacimiento"
 
 msgctxt "field:rrhh.dependent,employee:"
 msgid "Employee"
@@ -158,15 +158,15 @@ msgstr "Copiar"
 #, fuzzy
 msgctxt "field:rrhh.document,country:"
 msgid "Country"
-msgstr "Municipio"
+msgstr "País"
 
 msgctxt "field:rrhh.document,date_expiration:"
 msgid "Expiration date"
-msgstr "Fecha de expiración"
+msgstr "Fecha de Expiración"
 
 msgctxt "field:rrhh.document,date_issue:"
 msgid "Issue date"
-msgstr "Fecha de emisiíon"
+msgstr "Fecha de Emisiíon"
 
 #, fuzzy
 msgctxt "field:rrhh.document,description:"
@@ -222,7 +222,7 @@ msgstr "Activo"
 
 msgctxt "field:rrhh.position,childs:"
 msgid "Children"
-msgstr "Niños"
+msgstr "Hijos"
 
 msgctxt "field:rrhh.position,department:"
 msgid "Department"
@@ -288,11 +288,11 @@ msgstr ""
 
 msgctxt "help:rrhh.qualification,type:"
 msgid "Qualification type"
-msgstr "Tipo de calificacion"
+msgstr "Tipo de Calificacion"
 
 msgctxt "model:ir.action,name:act_contract_type_form"
 msgid "Contract type"
-msgstr "Tipo de contrato"
+msgstr "Tipo de Contrato"
 
 msgctxt "model:ir.action,name:act_department_list"
 msgid "Departments"
@@ -304,7 +304,7 @@ msgstr "Departamentos"
 
 msgctxt "model:ir.action,name:act_dependent_relation_form"
 msgid "Dependent relation"
-msgstr "Relación dependiente"
+msgstr "Relación Dependiente"
 
 msgctxt "model:ir.action,name:act_document_type_form"
 msgid "Document types"
@@ -312,11 +312,11 @@ msgstr "Tipos de Documentos"
 
 msgctxt "model:ir.action,name:act_instruction_form"
 msgid "Instruction levels"
-msgstr "Niveles de instrucción"
+msgstr "Niveles de Instrucción"
 
 msgctxt "model:ir.action,name:act_payment_type_form"
 msgid "Payment type"
-msgstr "Tipo de pago"
+msgstr "Tipo de Pago"
 
 msgctxt "model:ir.action,name:act_position_list"
 msgid "Positions"
@@ -328,12 +328,12 @@ msgstr "Posiciones"
 
 msgctxt "model:ir.action,name:act_qualification_degree_form"
 msgid "Qualification degree"
-msgstr "Grado de titulación"
+msgstr "Grado de Titulación"
 
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_contract_type_list_domain_all"
 msgid "Contract types"
-msgstr "Tipos de contrato"
+msgstr "Tipos de Contrato"
 
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_department_list_domain_all"
@@ -364,7 +364,7 @@ msgstr "Configuración"
 
 msgctxt "model:ir.ui.menu,name:menu_contract_type"
 msgid "Contract types"
-msgstr "Tipos de contrato"
+msgstr "Tipos de Contrato"
 
 msgctxt "model:ir.ui.menu,name:menu_department_list"
 msgid "Departments"
@@ -380,7 +380,7 @@ msgstr "Relaciones dependientes"
 
 msgctxt "model:ir.ui.menu,name:menu_document_type"
 msgid "Document type"
-msgstr "Tipo de documento"
+msgstr "Tipo de Documento"
 
 msgctxt "model:ir.ui.menu,name:menu_employee"
 msgid "Employees"
@@ -388,7 +388,7 @@ msgstr "Empleados"
 
 msgctxt "model:ir.ui.menu,name:menu_instruction_level"
 msgid "Instruction level"
-msgstr "Nivel de instrucción"
+msgstr "Nivel de Instrucción"
 
 msgctxt "model:ir.ui.menu,name:menu_organization"
 msgid "Organization"
@@ -396,7 +396,7 @@ msgstr "Empresa"
 
 msgctxt "model:ir.ui.menu,name:menu_payment_type"
 msgid "Payment types"
-msgstr "Tipos de pago"
+msgstr "Tipos de Pago"
 
 msgctxt "model:ir.ui.menu,name:menu_position_list"
 msgid "Positions"
@@ -408,7 +408,7 @@ msgstr "Posiciones"
 
 msgctxt "model:ir.ui.menu,name:menu_qualification_degree"
 msgid "Qualifications degrees"
-msgstr "Grados de titulación"
+msgstr "Grados de Titulación"
 
 msgctxt "model:ir.ui.menu,name:menu_rrhh"
 msgid "Human Resources"
@@ -416,7 +416,7 @@ msgstr "Recursos Humanos"
 
 msgctxt "model:res.group,name:group_rrhh"
 msgid "Human Resources"
-msgstr "Recursos humanos"
+msgstr "Recursos Humanos"
 
 msgctxt "model:res.group,name:group_rrhh_admin"
 msgid "Human Resources Administration"
@@ -424,7 +424,7 @@ msgstr "Administración de Recursos Humanos"
 
 msgctxt "model:rrhh.contract.type,name:"
 msgid "Contract type"
-msgstr "Tipo de contrato"
+msgstr "Tipo de Contrato"
 
 msgctxt "model:rrhh.department,name:"
 msgid "Company Department"
@@ -432,11 +432,11 @@ msgstr "Departamento de la Empresa"
 
 msgctxt "model:rrhh.dependent,name:"
 msgid "Employee dependents"
-msgstr "Empleados dependientes"
+msgstr "Empleados Dependientes"
 
 msgctxt "model:rrhh.dependent.relation,name:"
 msgid "Dependent relation"
-msgstr "Relación dependiente"
+msgstr "Relación Dependiente"
 
 msgctxt "model:rrhh.dependent.relation,name:rrhh_dependent_relation_daughter"
 msgid "Daughter"
@@ -483,7 +483,7 @@ msgstr "Esposa"
 
 msgctxt "model:rrhh.document,name:"
 msgid "Employee document"
-msgstr "Documento de empleado"
+msgstr "Documento del Empleado"
 
 msgctxt "model:rrhh.document.type,name:"
 msgid "Document type"
@@ -491,7 +491,7 @@ msgstr "Tipo de Documento"
 
 msgctxt "model:rrhh.document.type,name:rrhh_document_type_driver_license"
 msgid "Driver license"
-msgstr "Licencia de conducir"
+msgstr "Licencia de Conducir"
 
 msgctxt "model:rrhh.document.type,name:rrhh_document_type_national_id"
 msgid "National ID"
@@ -507,16 +507,16 @@ msgstr "Seguridad Social"
 
 msgctxt "model:rrhh.instruction.level,name:"
 msgid "Instruction level"
-msgstr "Nivel de instrucción"
+msgstr "Nivel de Instrucción"
 
 msgctxt ""
 "model:rrhh.instruction.level,name:rrhh_instruction_level_elementary_school"
 msgid "Elementary school"
-msgstr "Escuela primaria"
+msgstr "Escuela Primaria"
 
 msgctxt "model:rrhh.instruction.level,name:rrhh_instruction_level_high_school"
 msgid "High school"
-msgstr "Escuela secundaria"
+msgstr "Escuela Secundaria"
 
 msgctxt "model:rrhh.instruction.level,name:rrhh_instruction_level_none"
 msgid "None"
@@ -528,7 +528,7 @@ msgstr "Universidad"
 
 msgctxt "model:rrhh.payment.type,name:"
 msgid "Contract Payment type"
-msgstr "Tipo de pago del contrato"
+msgstr "Tipo de Pago del Contrato"
 
 msgctxt "model:rrhh.payment.type,name:payment_type_ach"
 msgid "ACH"
@@ -542,11 +542,11 @@ msgstr "Efectivo"
 #, fuzzy
 msgctxt "model:rrhh.payment.type,name:payment_type_check"
 msgid "Check"
-msgstr "Verificado"
+msgstr "Cheque"
 
 msgctxt "model:rrhh.position,name:"
 msgid "Company Position"
-msgstr "Posición de la compañía"
+msgstr "Posición en la Empresa"
 
 msgctxt "model:rrhh.qualification,name:"
 msgid "Qualification"
@@ -554,7 +554,7 @@ msgstr "Calificación"
 
 msgctxt "model:rrhh.qualification.degree,name:"
 msgid "Qualification degree"
-msgstr "Grado de titulación"
+msgstr "Grado de Titulación"
 
 msgctxt "selection:company.employee,genre:"
 msgid "Female"
@@ -603,7 +603,7 @@ msgstr "Habilidad"
 
 msgctxt "selection:rrhh.qualification,type:"
 msgid "Work experience"
-msgstr "Experiencia laboral"
+msgstr "Experiencia Laboral"
 
 #, fuzzy
 msgctxt "view:company.employee:"
