@@ -1,11 +1,12 @@
 HR Module
 #########
 
-rrhh is a basic Human Resources module. 
+rrhh is a basic Human Resources module.
+
     - Personal Information Management (PIM) system.
     - Company HR organization: Departments, positions, etc.
 
-'RRHH' is the spanish abbreviation for 'Recursos Humanos' ('Human Resources').
+**RRHH** is the spanish abbreviation or acronym for *Recursos Humanos* (*Human Resources*).
 
 
 Installing
