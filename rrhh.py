@@ -28,18 +28,13 @@ class Employee(metaclass=PoolMeta):
     documents = fields.One2Many('rrhh.document', 'employee', 'Documents')
     qualifications = fields.One2Many('rrhh.qualification',
         'employee', 'Qualification')
-    marital_status = fields.Selection([
-        ('single', 'Single'),
-        ('married', 'Married'),
-        ('divorced', 'Divorced'),
-        ('widowed', 'Widowed'),
-        ('other', 'Other'),
-        ], 'Marital status', required=True)
-    genre = fields.Selection([
-        ('male', 'Male'),
-        ('female', 'Female'),
-        ], 'Genre', required=True)
-    birth_date = fields.Date('Birth date', states={'required': True})
+    marital_status = fields.Function(fields.Selection(
+        'get_marital_status_selection', 'Legal State'),
+        'get_marital_status')
+    gender = fields.Function(fields.Selection('get_gender_selection',
+        'Gender'), 'get_gender')
+    birth_date = fields.Function(fields.Date('Birth date'),
+        'get_birth_date')
     birth_country = fields.Many2One('country.country',
         'Country of birth', states={'required': True})
     nationality = fields.Many2One('country.country',
@@ -60,10 +55,21 @@ class Employee(metaclass=PoolMeta):
             table.drop_column('middle_name')
             table.drop_column('last_name')
 
+        # To 5.6.1
+        if table.column_exist('birth_date'):
+            table.drop_column('birth_date')
+            table.drop_column('genre')
+            table.drop_column('marital_status')
+
     @classmethod
     def __setup__(cls):
         super(Employee, cls).__setup__()
+
         cls.company.states['readonly'] = True
+
+        cls.party.domain = [
+                ('party_type', '=', 'person')
+            ]
 
     @staticmethod
     def default_company():
@@ -71,6 +77,7 @@ class Employee(metaclass=PoolMeta):
 
     @staticmethod
     def compute_age(party_dob):
+        # TODO Translate with gettext
         if not party_dob:
             return 'No Birth date!'
 
@@ -90,6 +97,30 @@ class Employee(metaclass=PoolMeta):
     def get_department(self, name):
         if self.position:
             return self.position.department.name
+
+    def get_marital_status(self, name):
+        if self.party:
+            return self.party.person_legal_state
+
+    def get_gender(self, name):
+        if self.party:
+            return self.party.gender
+
+    def get_birth_date(self, name):
+        if self.party:
+            return self.party.dob
+
+    @classmethod
+    def get_gender_selection(cls):
+        pool = Pool()
+        Party = pool.get('party.party')
+        return Party.gender.selection
+
+    @classmethod
+    def get_marital_status_selection(cls):
+        pool = Pool()
+        Party = pool.get('party.party')
+        return Party.person_legal_state.selection
 
     @fields.depends('position')
     def on_change_company(self):

@@ -14,8 +14,8 @@ the full copyright notices and license terms. -->
                         <field name="birth_date"/>
                         <label name="age"/>
                         <field name="age"/>
-                        <label name="genre"/>
-                        <field name="genre"/>
+                        <label name="gender"/>
+                        <field name="gender"/>
                         <label name="marital_status"/>
                         <field name="marital_status"/>
                         <label name="instruction_level"/>
@@ -58,4 +58,3 @@ the full copyright notices and license terms. -->
         </notebook>
     </xpath>
 </data>
-
