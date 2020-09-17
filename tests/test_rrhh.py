@@ -30,6 +30,10 @@ class RRHHTestCase(ModuleTestCase):
             employee = create_employee('Employee 1')
             employee.save()
             self.assertTrue(employee.id)
+            party = employee.party
+            self.assertEqual(employee.gender, party.gender)
+            self.assertEqual(employee.marital_status, party.person_legal_state)
+            self.assertEqual(employee.birth_date, party.dob)
 
 
 def create_employee(name):
@@ -43,7 +47,13 @@ def create_employee(name):
     PaymentType = pool.get('rrhh.payment.type')
     InstructionLevel = pool.get('rrhh.instruction.level')
 
-    party = Party(name=name)
+    party = Party(
+        name=name,
+        party_type='person',
+        gender='male',
+        person_legal_state='single',
+        dob=datetime.date(year=1969, month=8, day=29),
+        )
     party.save()
 
     department = Department(name='Department')
@@ -67,9 +77,6 @@ def create_employee(name):
             ('name', '=', 'ACH')])[0],
         instruction_level=InstructionLevel.search([
             ('name', '=', 'University')])[0],
-        marital_status='single',
-        genre='male',
-        birth_date=datetime.date(year=1969, month=8, day=29),
         birth_country=country,
         nationality=country,
         residence=country,
