@@ -8,25 +8,9 @@ from dateutil.relativedelta import relativedelta
 from trytond.transaction import Transaction
 from trytond.pyson import Bool, Eval, If
 
-__all__ = [
-        'Employee',
-        'Department',
-        'Position',
-        'InstructionLevel',
-        'Dependent',
-        'DependentRelation',
-        'DocumentType',
-        'Document',
-        'Qualification',
-        'QualificationDegree',
-        'ContractType',
-        'PaymentType',
-        ]
-
 
 class Employee(metaclass=PoolMeta):
     __name__ = 'company.employee'
-
     photo = fields.Binary('Photo', file_id='photo_id')
     photo_id = fields.Char('Photo id', states={'invisible': True})
     position = fields.Many2One('rrhh.position', 'Position', required=True,
@@ -75,6 +59,11 @@ class Employee(metaclass=PoolMeta):
             table.drop_column('first_name')
             table.drop_column('middle_name')
             table.drop_column('last_name')
+
+    @classmethod
+    def __setup__(cls):
+        super(Employee, cls).__setup__()
+        cls.company.states['readonly'] = True
 
     @staticmethod
     def default_company():
