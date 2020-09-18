@@ -24,7 +24,7 @@ the full copyright notices and license terms. -->
             <field name="path">icons/rrhh.svg</field>
         </record>
 
-        <menuitem name="Human Resources" id="menu_rrhh" sequence="5"
+        <menuitem name="Human Resources" id="menu_rrhh" sequence="6"
             icon="rrhh"/>
         <record model="ir.ui.menu-res.group" id="menu_rrhh_group_rrhh">
             <field name="menu" ref="menu_rrhh"/>
