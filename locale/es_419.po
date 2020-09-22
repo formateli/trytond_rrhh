@@ -1,0 +1,631 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:company.employee,age:"
+msgid "Age"
+msgstr "Edad"
+
+msgctxt "field:company.employee,birth_country:"
+msgid "Country of birth"
+msgstr "País de nacimiento"
+
+msgctxt "field:company.employee,birth_date:"
+msgid "Birth date"
+msgstr "Fecha de Nacimiento"
+
+msgctxt "field:company.employee,contract_type:"
+msgid "Contract type"
+msgstr "Tipo de Contrato"
+
+msgctxt "field:company.employee,department:"
+msgid "Department"
+msgstr "Departamento"
+
+msgctxt "field:company.employee,dependents:"
+msgid "Dependents"
+msgstr "Dependientes"
+
+#, fuzzy
+msgctxt "field:company.employee,documents:"
+msgid "Documents"
+msgstr "Documentos"
+
+msgctxt "field:company.employee,genre:"
+msgid "Genre"
+msgstr "Género"
+
+msgctxt "field:company.employee,instruction_level:"
+msgid "Instruction level"
+msgstr "Nivel de Instrucción"
+
+msgctxt "field:company.employee,marital_status:"
+msgid "Marital status"
+msgstr "Estado Civil"
+
+msgctxt "field:company.employee,nationality:"
+msgid "Nationality"
+msgstr "Nacionalidad"
+
+msgctxt "field:company.employee,payment_type:"
+msgid "Payment type"
+msgstr "Tipo de Pago"
+
+msgctxt "field:company.employee,photo:"
+msgid "Photo"
+msgstr "Foto"
+
+msgctxt "field:company.employee,photo_id:"
+msgid "Photo id"
+msgstr "Identificación Fotográfica"
+
+msgctxt "field:company.employee,position:"
+msgid "Position"
+msgstr "Posición"
+
+msgctxt "field:company.employee,qualifications:"
+msgid "Qualification"
+msgstr "Calificación"
+
+msgctxt "field:company.employee,residence:"
+msgid "Country of residence"
+msgstr "País de Residencia"
+
+#, fuzzy
+msgctxt "field:rrhh.contract.type,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:rrhh.contract.type,conditions:"
+msgid "Conditions"
+msgstr "Condiciones"
+
+#, fuzzy
+msgctxt "field:rrhh.contract.type,name:"
+msgid "Name"
+msgstr "Nombre"
+
+#, fuzzy
+msgctxt "field:rrhh.department,active:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "field:rrhh.department,childs:"
+msgid "Children"
+msgstr "Hijos"
+
+#, fuzzy
+msgctxt "field:rrhh.department,company:"
+msgid "Company"
+msgstr "Empresa"
+
+#, fuzzy
+msgctxt "field:rrhh.department,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:rrhh.department,parent:"
+msgid "Parent"
+msgstr "Padre"
+
+msgctxt "field:rrhh.department,positions:"
+msgid "Positions"
+msgstr "Posiciones"
+
+msgctxt "field:rrhh.dependent,age:"
+msgid "Age"
+msgstr "Edad"
+
+msgctxt "field:rrhh.dependent,birth_date:"
+msgid "Birth date"
+msgstr "Fecha de Nacimiento"
+
+msgctxt "field:rrhh.dependent,employee:"
+msgid "Employee"
+msgstr "Empleado"
+
+#, fuzzy
+msgctxt "field:rrhh.dependent,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:rrhh.dependent,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:rrhh.dependent,relation:"
+msgid "Relation"
+msgstr "Relación"
+
+#, fuzzy
+msgctxt "field:rrhh.dependent.relation,active:"
+msgid "Active"
+msgstr "Activo"
+
+#, fuzzy
+msgctxt "field:rrhh.dependent.relation,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:rrhh.document,copy_id:"
+msgid "Copy id"
+msgstr "Copiar id"
+
+msgctxt "field:rrhh.document,copy_image:"
+msgid "Copy"
+msgstr "Copiar"
+
+#, fuzzy
+msgctxt "field:rrhh.document,country:"
+msgid "Country"
+msgstr "País"
+
+msgctxt "field:rrhh.document,date_expiration:"
+msgid "Expiration date"
+msgstr "Fecha de Expiración"
+
+msgctxt "field:rrhh.document,date_issue:"
+msgid "Issue date"
+msgstr "Fecha de Emisiíon"
+
+#, fuzzy
+msgctxt "field:rrhh.document,description:"
+msgid "Number"
+msgstr "Número"
+
+msgctxt "field:rrhh.document,employee:"
+msgid "Employee"
+msgstr "Empleado"
+
+msgctxt "field:rrhh.document,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+#, fuzzy
+msgctxt "field:rrhh.document,type:"
+msgid "Type"
+msgstr "Tipo"
+
+#, fuzzy
+msgctxt "field:rrhh.document.type,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:rrhh.document.type,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+#, fuzzy
+msgctxt "field:rrhh.instruction.level,active:"
+msgid "Active"
+msgstr "Activo"
+
+#, fuzzy
+msgctxt "field:rrhh.instruction.level,name:"
+msgid "Name"
+msgstr "Nombre"
+
+#, fuzzy
+msgctxt "field:rrhh.payment.type,active:"
+msgid "Active"
+msgstr "Activo"
+
+#, fuzzy
+msgctxt "field:rrhh.payment.type,name:"
+msgid "Name"
+msgstr "Nombre"
+
+#, fuzzy
+msgctxt "field:rrhh.position,active:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "field:rrhh.position,childs:"
+msgid "Children"
+msgstr "Hijos"
+
+msgctxt "field:rrhh.position,department:"
+msgid "Department"
+msgstr "Departamento"
+
+#, fuzzy
+msgctxt "field:rrhh.position,description:"
+msgid "Description"
+msgstr "Descripción"
+
+#, fuzzy
+msgctxt "field:rrhh.position,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:rrhh.position,parent:"
+msgid "Parent"
+msgstr "Padre"
+
+msgctxt "field:rrhh.qualification,degree:"
+msgid "Degree"
+msgstr "Título"
+
+msgctxt "field:rrhh.qualification,employee:"
+msgid "Employee"
+msgstr "Empleado"
+
+#, fuzzy
+msgctxt "field:rrhh.qualification,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:rrhh.qualification,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+#, fuzzy
+msgctxt "field:rrhh.qualification,type:"
+msgid "Type"
+msgstr "Tipo"
+
+#, fuzzy
+msgctxt "field:rrhh.qualification.degree,active:"
+msgid "Active"
+msgstr "Activo"
+
+#, fuzzy
+msgctxt "field:rrhh.qualification.degree,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "help:rrhh.document,description:"
+msgid "Document description or number"
+msgstr "Descripción o número del documento"
+
+msgctxt "help:rrhh.qualification,degree:"
+msgid ""
+"The qualification degree, if applicable. It could be \"None\", "
+"\"Unfinished\" or any valid degree."
+msgstr ""
+"El título de calificación, si corresponde. Puede ser \"Ninguno\", \"Sin "
+"terminar\" o cualquier título válido."
+
+msgctxt "help:rrhh.qualification,type:"
+msgid "Qualification type"
+msgstr "Tipo de Calificacion"
+
+msgctxt "model:ir.action,name:act_contract_type_form"
+msgid "Contract type"
+msgstr "Tipo de Contrato"
+
+msgctxt "model:ir.action,name:act_department_list"
+msgid "Departments"
+msgstr "Departamentos"
+
+msgctxt "model:ir.action,name:act_department_tree"
+msgid "Departments"
+msgstr "Departamentos"
+
+msgctxt "model:ir.action,name:act_dependent_relation_form"
+msgid "Dependent relation"
+msgstr "Relación Dependiente"
+
+msgctxt "model:ir.action,name:act_document_type_form"
+msgid "Document types"
+msgstr "Tipos de Documentos"
+
+msgctxt "model:ir.action,name:act_instruction_form"
+msgid "Instruction levels"
+msgstr "Niveles de Instrucción"
+
+msgctxt "model:ir.action,name:act_payment_type_form"
+msgid "Payment type"
+msgstr "Tipo de Pago"
+
+msgctxt "model:ir.action,name:act_position_list"
+msgid "Positions"
+msgstr "Posiciones"
+
+msgctxt "model:ir.action,name:act_position_tree"
+msgid "Positions"
+msgstr "Posiciones"
+
+msgctxt "model:ir.action,name:act_qualification_degree_form"
+msgid "Qualification degree"
+msgstr "Grado de Titulación"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_contract_type_list_domain_all"
+msgid "Contract types"
+msgstr "Tipos de Contrato"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_department_list_domain_all"
+msgid "Departments"
+msgstr "Departamentos"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_department_tree_domain_all"
+msgid "Departments"
+msgstr "Departamentos"
+
+msgctxt "model:ir.action.act_window.domain,name:act_employee_domain_all"
+msgid "Employees"
+msgstr "Empleados"
+
+msgctxt "model:ir.action.act_window.domain,name:act_position_list_domain_all"
+msgid "Positions"
+msgstr "Posiciones"
+
+msgctxt "model:ir.action.act_window.domain,name:act_position_tree_domain_all"
+msgid "Positions"
+msgstr "Posiciones"
+
+#, fuzzy
+msgctxt "model:ir.ui.menu,name:menu_configuration"
+msgid "Configuration"
+msgstr "Configuración"
+
+msgctxt "model:ir.ui.menu,name:menu_contract_type"
+msgid "Contract types"
+msgstr "Tipos de Contrato"
+
+msgctxt "model:ir.ui.menu,name:menu_department_list"
+msgid "Departments"
+msgstr "Departamentos"
+
+msgctxt "model:ir.ui.menu,name:menu_department_tree"
+msgid "Departments"
+msgstr "Departamentos"
+
+msgctxt "model:ir.ui.menu,name:menu_dependent_relation"
+msgid "Dependent relations"
+msgstr "Relaciones dependientes"
+
+msgctxt "model:ir.ui.menu,name:menu_document_type"
+msgid "Document type"
+msgstr "Tipo de Documento"
+
+msgctxt "model:ir.ui.menu,name:menu_employee"
+msgid "Employees"
+msgstr "Empleados"
+
+msgctxt "model:ir.ui.menu,name:menu_instruction_level"
+msgid "Instruction level"
+msgstr "Nivel de Instrucción"
+
+msgctxt "model:ir.ui.menu,name:menu_organization"
+msgid "Organization"
+msgstr "Empresa"
+
+msgctxt "model:ir.ui.menu,name:menu_payment_type"
+msgid "Payment types"
+msgstr "Tipos de Pago"
+
+msgctxt "model:ir.ui.menu,name:menu_position_list"
+msgid "Positions"
+msgstr "Posiciones"
+
+msgctxt "model:ir.ui.menu,name:menu_position_tree"
+msgid "Positions"
+msgstr "Posiciones"
+
+msgctxt "model:ir.ui.menu,name:menu_qualification_degree"
+msgid "Qualifications degrees"
+msgstr "Grados de Titulación"
+
+msgctxt "model:ir.ui.menu,name:menu_rrhh"
+msgid "Human Resources"
+msgstr "Recursos Humanos"
+
+msgctxt "model:res.group,name:group_rrhh"
+msgid "Human Resources"
+msgstr "Recursos Humanos"
+
+msgctxt "model:res.group,name:group_rrhh_admin"
+msgid "Human Resources Administration"
+msgstr "Administración de Recursos Humanos"
+
+msgctxt "model:rrhh.contract.type,name:"
+msgid "Contract type"
+msgstr "Tipo de Contrato"
+
+msgctxt "model:rrhh.department,name:"
+msgid "Company Department"
+msgstr "Departamento de la Empresa"
+
+msgctxt "model:rrhh.dependent,name:"
+msgid "Employee dependents"
+msgstr "Empleados Dependientes"
+
+msgctxt "model:rrhh.dependent.relation,name:"
+msgid "Dependent relation"
+msgstr "Relación Dependiente"
+
+msgctxt "model:rrhh.dependent.relation,name:rrhh_dependent_relation_daughter"
+msgid "Daughter"
+msgstr "Hija"
+
+msgctxt "model:rrhh.dependent.relation,name:rrhh_dependent_relation_father"
+msgid "Father"
+msgstr "Padre"
+
+msgctxt ""
+"model:rrhh.dependent.relation,name:rrhh_dependent_relation_granddaughter"
+msgid "Granddaughter"
+msgstr "Nieta"
+
+msgctxt ""
+"model:rrhh.dependent.relation,name:rrhh_dependent_relation_grandfather"
+msgid "Grandfather"
+msgstr "Abuelo"
+
+msgctxt ""
+"model:rrhh.dependent.relation,name:rrhh_dependent_relation_grandmother"
+msgid "Grandmother"
+msgstr "Abuela"
+
+msgctxt "model:rrhh.dependent.relation,name:rrhh_dependent_relation_grandson"
+msgid "Grandson"
+msgstr "Nieto"
+
+msgctxt "model:rrhh.dependent.relation,name:rrhh_dependent_relation_husband"
+msgid "Husband"
+msgstr "Esposo"
+
+msgctxt "model:rrhh.dependent.relation,name:rrhh_dependent_relation_mother"
+msgid "Mother"
+msgstr "Madre"
+
+msgctxt "model:rrhh.dependent.relation,name:rrhh_dependent_relation_son"
+msgid "Son"
+msgstr "Hijo"
+
+msgctxt "model:rrhh.dependent.relation,name:rrhh_dependent_relation_wife"
+msgid "Wife"
+msgstr "Esposa"
+
+msgctxt "model:rrhh.document,name:"
+msgid "Employee document"
+msgstr "Documento del Empleado"
+
+msgctxt "model:rrhh.document.type,name:"
+msgid "Document type"
+msgstr "Tipo de Documento"
+
+msgctxt "model:rrhh.document.type,name:rrhh_document_type_driver_license"
+msgid "Driver license"
+msgstr "Licencia de Conducir"
+
+msgctxt "model:rrhh.document.type,name:rrhh_document_type_national_id"
+msgid "National ID"
+msgstr "Identificación Nacional"
+
+msgctxt "model:rrhh.document.type,name:rrhh_document_type_passport"
+msgid "Passport"
+msgstr "Pasaporte"
+
+msgctxt "model:rrhh.document.type,name:rrhh_document_type_social_security"
+msgid "Social security"
+msgstr "Seguridad Social"
+
+msgctxt "model:rrhh.instruction.level,name:"
+msgid "Instruction level"
+msgstr "Nivel de Instrucción"
+
+msgctxt ""
+"model:rrhh.instruction.level,name:rrhh_instruction_level_elementary_school"
+msgid "Elementary school"
+msgstr "Escuela Primaria"
+
+msgctxt "model:rrhh.instruction.level,name:rrhh_instruction_level_high_school"
+msgid "High school"
+msgstr "Escuela Secundaria"
+
+msgctxt "model:rrhh.instruction.level,name:rrhh_instruction_level_none"
+msgid "None"
+msgstr "Ninguno"
+
+msgctxt "model:rrhh.instruction.level,name:rrhh_instruction_level_university"
+msgid "University"
+msgstr "Universidad"
+
+msgctxt "model:rrhh.payment.type,name:"
+msgid "Contract Payment type"
+msgstr "Tipo de Pago del Contrato"
+
+msgctxt "model:rrhh.payment.type,name:payment_type_ach"
+msgid "ACH"
+msgstr "ACH"
+
+#, fuzzy
+msgctxt "model:rrhh.payment.type,name:payment_type_cash"
+msgid "Cash"
+msgstr "Efectivo"
+
+#, fuzzy
+msgctxt "model:rrhh.payment.type,name:payment_type_check"
+msgid "Check"
+msgstr "Cheque"
+
+msgctxt "model:rrhh.position,name:"
+msgid "Company Position"
+msgstr "Posición en la Empresa"
+
+msgctxt "model:rrhh.qualification,name:"
+msgid "Qualification"
+msgstr "Calificación"
+
+msgctxt "model:rrhh.qualification.degree,name:"
+msgid "Qualification degree"
+msgstr "Grado de Titulación"
+
+msgctxt "selection:company.employee,genre:"
+msgid "Female"
+msgstr "Femenino"
+
+#, fuzzy
+msgctxt "selection:company.employee,genre:"
+msgid "Male"
+msgstr "Masculino"
+
+msgctxt "selection:company.employee,marital_status:"
+msgid "Divorced"
+msgstr "Divorciado(a)"
+
+msgctxt "selection:company.employee,marital_status:"
+msgid "Married"
+msgstr "Casado(a)"
+
+msgctxt "selection:company.employee,marital_status:"
+msgid "Other"
+msgstr "Otro"
+
+msgctxt "selection:company.employee,marital_status:"
+msgid "Single"
+msgstr "Soltero(a)"
+
+msgctxt "selection:company.employee,marital_status:"
+msgid "Widowed"
+msgstr "Viudo(a)"
+
+msgctxt "selection:rrhh.qualification,type:"
+msgid "Certification"
+msgstr "Certificación"
+
+msgctxt "selection:rrhh.qualification,type:"
+msgid "Education"
+msgstr "Educación"
+
+msgctxt "selection:rrhh.qualification,type:"
+msgid "Language"
+msgstr "Idioma"
+
+msgctxt "selection:rrhh.qualification,type:"
+msgid "Skill"
+msgstr "Habilidad"
+
+msgctxt "selection:rrhh.qualification,type:"
+msgid "Work experience"
+msgstr "Experiencia Laboral"
+
+#, fuzzy
+msgctxt "view:company.employee:"
+msgid "Documents"
+msgstr "Documentos"
+
+msgctxt "view:company.employee:"
+msgid "Job Info"
+msgstr "Información del Trabajo"
+
+msgctxt "view:company.employee:"
+msgid "Personal info"
+msgstr "Información Personal"
+
+msgctxt "view:company.employee:"
+msgid "Qualification"
+msgstr "Calificación"
+
+msgctxt "view:rrhh.document:"
+msgid "Copy"
+msgstr "Copiar"
+
+msgctxt "view:rrhh.document:"
+msgid "Notes"
+msgstr "Notas"
