@@ -28,11 +28,10 @@ class Employee(metaclass=PoolMeta):
     documents = fields.One2Many('rrhh.document', 'employee', 'Documents')
     qualifications = fields.One2Many('rrhh.qualification',
         'employee', 'Qualification')
-    marital_status = fields.Function(fields.Selection(
-        'get_marital_status_selection', 'Legal State'),
+    marital_status = fields.Function(fields.Char('Legal State'),
         'get_marital_status')
-    gender = fields.Function(fields.Selection('get_gender_selection',
-        'Gender'), 'get_gender')
+    gender = fields.Function(fields.Char('Gender'),
+        'get_gender')
     birth_date = fields.Function(fields.Date('Birth date'),
         'get_birth_date')
     birth_country = fields.Many2One('country.country',
@@ -99,28 +98,31 @@ class Employee(metaclass=PoolMeta):
             return self.position.department.name
 
     def get_marital_status(self, name):
-        if self.party:
-            return self.party.person_legal_state
+        return self._get_party_selection_string('person_legal_state')
 
     def get_gender(self, name):
+        return self._get_party_selection_string('gender')
+
+    def _get_party_selection_string(self, sel_name):
+        pool = Pool()
+        Trans = pool.get('ir.translation')
+        Party = pool.get('party.party')
         if self.party:
-            return self.party.gender
+            selection = getattr(Party, sel_name).selection
+            sel = dict(selection)[getattr(self.party, sel_name)]
+            lang = Transaction().context.get('language', None)
+            val = Trans.get_source(
+                'party.party,' + sel_name,
+                'selection',
+                lang,
+                sel)
+            if not val:
+                val = sel
+            return val
 
     def get_birth_date(self, name):
         if self.party:
             return self.party.dob
-
-    @classmethod
-    def get_gender_selection(cls):
-        pool = Pool()
-        Party = pool.get('party.party')
-        return Party.gender.selection
-
-    @classmethod
-    def get_marital_status_selection(cls):
-        pool = Pool()
-        Party = pool.get('party.party')
-        return Party.person_legal_state.selection
 
     @fields.depends('position')
     def on_change_company(self):
