@@ -1,3 +1,4 @@
+# This file is part of RRHH module.
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
 from trytond.model import ModelView, ModelSQL, fields, Unique
@@ -7,25 +8,9 @@ from dateutil.relativedelta import relativedelta
 from trytond.transaction import Transaction
 from trytond.pyson import Bool, Eval, If
 
-__all__ = [
-        'Employee',
-        'Department',
-        'Position',
-        'InstructionLevel',
-        'Dependent',
-        'DependentRelation',
-        'DocumentType',
-        'Document',
-        'Qualification',
-        'QualificationDegree',
-        'ContractType',
-        'PaymentType',
-        ]
-
 
 class Employee(metaclass=PoolMeta):
     __name__ = 'company.employee'
-
     photo = fields.Binary('Photo', file_id='photo_id')
     photo_id = fields.Char('Photo id', states={'invisible': True})
     position = fields.Many2One('rrhh.position', 'Position', required=True,
@@ -43,29 +28,18 @@ class Employee(metaclass=PoolMeta):
     documents = fields.One2Many('rrhh.document', 'employee', 'Documents')
     qualifications = fields.One2Many('rrhh.qualification',
         'employee', 'Qualification')
-    #supervisor = fields.Many2One('company.employee', 'Supervisor',
-    #    domain=[('company', '=', Eval('company'))],
-    #    depends=['company'])
-    #subordinates = fields.One2Many('company.employee', 'supervisor',
-    #    'Subordinates', readonly=True)
-    marital_status = fields.Selection([
-        ('single', 'Single'),
-        ('married', 'Married'),
-        ('divorced', 'Divorced'),
-        ('widowed', 'Widowed'),
-        ('other', 'Other'),
-        ], 'Marital status', required=True)
-    genre = fields.Selection([
-        ('male', 'Male'),
-        ('female', 'Female'),
-        ], 'Genre', required=True)
-    birth_date = fields.Date('Birth date', required=True)
+    marital_status = fields.Function(fields.Char('Legal State'),
+        'get_marital_status')
+    gender = fields.Function(fields.Char('Gender'),
+        'get_gender')
+    birth_date = fields.Function(fields.Date('Birth date'),
+        'get_birth_date')
     birth_country = fields.Many2One('country.country',
-        'Country of birth', required=True)
+        'Country of birth', states={'required': True})
     nationality = fields.Many2One('country.country',
-        'Nationality', required=True)
+        'Nationality', states={'required': True})
     residence = fields.Many2One('country.country',
-        'Country of residence', required=True)
+        'Country of residence', states={'required': True})
     age = fields.Function(fields.Char('Age'), 'get_age')
     dependents = fields.One2Many('rrhh.dependent', 'employee', 'Dependents')
 
@@ -80,12 +54,29 @@ class Employee(metaclass=PoolMeta):
             table.drop_column('middle_name')
             table.drop_column('last_name')
 
+        # To 5.6.1
+        if table.column_exist('birth_date'):
+            table.drop_column('birth_date')
+            table.drop_column('genre')
+            table.drop_column('marital_status')
+
+    @classmethod
+    def __setup__(cls):
+        super(Employee, cls).__setup__()
+
+        cls.company.states['readonly'] = True
+
+        cls.party.domain = [
+            ('party_type', '=', 'person')
+            ]
+
     @staticmethod
     def default_company():
         return Transaction().context.get('company')
 
     @staticmethod
     def compute_age(party_dob):
+        # TODO Translate with gettext
         if not party_dob:
             return 'No Birth date!'
 
@@ -105,6 +96,33 @@ class Employee(metaclass=PoolMeta):
     def get_department(self, name):
         if self.position:
             return self.position.department.name
+
+    def get_marital_status(self, name):
+        return self._get_party_selection_string('person_legal_state')
+
+    def get_gender(self, name):
+        return self._get_party_selection_string('gender')
+
+    def _get_party_selection_string(self, sel_name):
+        pool = Pool()
+        Trans = pool.get('ir.translation')
+        Party = pool.get('party.party')
+        if self.party:
+            selection = getattr(Party, sel_name).selection
+            sel = dict(selection)[getattr(self.party, sel_name)]
+            lang = Transaction().context.get('language', None)
+            val = Trans.get_source(
+                'party.party,' + sel_name,
+                'selection',
+                lang,
+                sel)
+            if not val:
+                val = sel
+            return val
+
+    def get_birth_date(self, name):
+        if self.party:
+            return self.party.dob
 
     @fields.depends('position')
     def on_change_company(self):

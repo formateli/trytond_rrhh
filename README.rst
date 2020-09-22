@@ -1,11 +1,12 @@
 HR Module
 #########
 
-rrhh is a basic Human Resources module. 
-    - Personal Information Management (PIM) system.
-    - Company HR organization: Departments, positions, etc.
+rrhh is a basic Human Resources (HR) module for Tryton.
 
-'RRHH' is the spanish abbreviation for 'Recursos Humanos' ('Human Resources').
+* Personal Information Management (PIM) system.
+* Company HR organisation: Departments, positions, etc.
+
+**RRHH** is the spanish abbreviation or acronym for *Recursos Humanos* (*Human Resources*).
 
 
 Installing
@@ -19,11 +20,11 @@ Support
 
 For Tryton framework:
 
-    * https://tryton.org/
+* https://tryton.org/
 
 For this module
 
-    * https://github.com/formateli/trytond_rrhh
+* https://github.com/formateli/trytond_rrhh
 
 License
 -------
