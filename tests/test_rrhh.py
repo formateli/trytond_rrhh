@@ -30,10 +30,6 @@ class RRHHTestCase(ModuleTestCase):
             employee = create_employee('Employee 1')
             employee.save()
             self.assertTrue(employee.id)
-            party = employee.party
-            self.assertEqual(employee.gender, party.gender)
-            self.assertEqual(employee.marital_status, party.person_legal_state)
-            self.assertEqual(employee.birth_date, party.dob)
 
 
 def create_employee(name):
@@ -59,7 +55,7 @@ def create_employee(name):
     department = Department(name='Department')
     department.save()
 
-    position=Position(name='Position', department=department)
+    position = Position(name='Position', department=department)
     position.save()
 
     contract_type = ContractType(name='Full Time')

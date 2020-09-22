@@ -67,7 +67,7 @@ class Employee(metaclass=PoolMeta):
         cls.company.states['readonly'] = True
 
         cls.party.domain = [
-                ('party_type', '=', 'person')
+            ('party_type', '=', 'person')
             ]
 
     @staticmethod
