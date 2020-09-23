@@ -111,6 +111,8 @@ class Employee(metaclass=PoolMeta):
             selection = getattr(Party, sel_name).selection
             sel = dict(selection)[getattr(self.party, sel_name)]
             lang = Transaction().context.get('language', None)
+            if lang in (None, '', 'en'):
+                return sel
             val = Trans.get_source(
                 'party.party,' + sel_name,
                 'selection',
