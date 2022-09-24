@@ -1,10 +1,7 @@
 # This file is part of RRHH module.
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
-try:
-    from trytond.modules.rrhh.tests.test_rrhh import suite, create_employee
-except ImportError:
-    from .test_rrhh import suite, create_employee
+from .test_rrhh import create_employee
 
 
-__all__ = ['suite', 'create_employee']
+__all__ = ['create_employee']

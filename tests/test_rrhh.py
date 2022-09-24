@@ -8,8 +8,6 @@ from trytond.pool import Pool
 from trytond.tests.test_tryton import ModuleTestCase, with_transaction
 from trytond.modules.company.tests import create_company, set_company
 
-__all__ = ['create_employee']
-
 
 class RRHHTestCase(ModuleTestCase):
     'Test rrhh module'
@@ -80,9 +78,4 @@ def create_employee(name):
 
     return employee
 
-
-def suite():
-    suite = trytond.tests.test_tryton.suite()
-    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(
-        RRHHTestCase))
-    return suite
+del ModuleTestCase

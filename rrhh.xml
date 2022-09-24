@@ -216,16 +216,6 @@ the full copyright notices and license terms. -->
             <field name="view" ref="contract_type_view_form"/>
             <field name="act_window" ref="act_contract_type_form"/>
         </record>
-        <record model="ir.action.act_window.domain" id="act_contract_type_list_domain_all">
-            <field name="name">Contract types</field>
-            <field name="sequence" eval="10"/>
-            <field name="domain"
-                eval="[If (Eval('context', {}).get('company', False),
-                  ('company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
-                  ('company', '!=', None))]"
-                pyson="1"/>
-            <field name="act_window" ref="act_contract_type_form"/>
-        </record>
 
         <menuitem name="Contract types" id="menu_contract_type"
             sequence="30" action="act_contract_type_form"
@@ -265,27 +255,29 @@ the full copyright notices and license terms. -->
             sequence="50"
             parent="menu_configuration"/>
 
-        <record model="ir.ui.view" id="department_view_form">
-            <field name="model">rrhh.department</field>
-            <field name="type">form</field>
-            <field name="name">department_form</field>
-        </record>
-        <record model="ir.ui.view" id="department_view_tree">
-            <field name="model">rrhh.department</field>
-            <field name="type">tree</field>
-            <field name="field_childs">childs</field>
-            <field name="name">department_tree</field>
-        </record>
         <record model="ir.ui.view" id="department_view_list">
             <field name="model">rrhh.department</field>
             <field name="type">tree</field>
             <field name="priority" eval="10"/>
             <field name="name">department_list</field>
         </record>
+        <record model="ir.ui.view" id="department_view_tree">
+            <field name="model">rrhh.department</field>
+	    <field name="type">tree</field>
+            <field name="priority" eval="20"/>
+            <field name="field_childs">childs</field>
+            <field name="name">department_tree</field>
+        </record>
+        <record model="ir.ui.view" id="department_view_form">
+            <field name="model">rrhh.department</field>
+            <field name="type">form</field>
+            <field name="name">department_form</field>
+        </record>
 
         <record model="ir.action.act_window" id="act_department_tree">
             <field name="name">Departments</field>
-            <field name="res_model">rrhh.department</field>
+	    <field name="res_model">rrhh.department</field>
+            <field name="domain" eval="[('parent', '=', None)]" pyson="1"/>
         </record>
         <record model="ir.action.act_window.view" id="act_department_tree_view1">
             <field name="sequence" eval="10"/>
@@ -295,18 +287,6 @@ the full copyright notices and license terms. -->
         <record model="ir.action.act_window.view" id="act_department_tree_view2">
             <field name="sequence" eval="20"/>
             <field name="view" ref="department_view_form"/>
-            <field name="act_window" ref="act_department_tree"/>
-        </record>
-
-        <record model="ir.action.act_window.domain" id="act_department_tree_domain_all">
-            <field name="name">Departments</field>
-            <field name="sequence" eval="10"/>
-            <field name="domain"
-                eval="[('parent', '=', None),
-                  If (Eval('context', {}).get('company', False),
-                    ('company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
-                    ('company', '!=', None))]"
-                pyson="1"/>
             <field name="act_window" ref="act_department_tree"/>
         </record>
 
@@ -328,44 +308,32 @@ the full copyright notices and license terms. -->
             <field name="act_window" ref="act_department_list"/>
         </record>
 
-        <record model="ir.action.act_window.domain" id="act_department_list_domain_all">
-            <field name="name">Departments</field>
-            <field name="sequence" eval="10"/>
-            <field name="domain"
-                eval="[If (Eval('context', {}).get('company', False),
-                  ('company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
-                  ('company', '!=', None))]"
-                pyson="1"/>
-            <field name="act_window" ref="act_department_list"/>
-        </record>
-
         <menuitem parent="menu_department_tree" action="act_department_list"
             id="menu_department_list"/>
 
-        <record model="ir.ui.view" id="position_view_form">
-            <field name="model">rrhh.position</field>
-            <field name="type">form</field>
-            <field name="name">position_form</field>
-        </record>
-        <record model="ir.ui.view" id="position_view_tree">
-            <field name="model">rrhh.position</field>
-            <field name="type">tree</field>
-            <field name="field_childs">childs</field>
-            <field name="name">position_tree</field>
-        </record>
         <record model="ir.ui.view" id="position_view_list">
             <field name="model">rrhh.position</field>
             <field name="type">tree</field>
             <field name="priority" eval="10"/>
             <field name="name">position_list</field>
         </record>
+        <record model="ir.ui.view" id="position_view_tree">
+            <field name="model">rrhh.position</field>
+	    <field name="type">tree</field>
+            <field name="priority" eval="20"/>
+            <field name="field_childs">childs</field>
+            <field name="name">position_tree</field>
+        </record>
+        <record model="ir.ui.view" id="position_view_form">
+            <field name="model">rrhh.position</field>
+            <field name="type">form</field>
+            <field name="name">position_form</field>
+        </record>
 
         <record model="ir.action.act_window" id="act_position_tree">
             <field name="name">Positions</field>
             <field name="res_model">rrhh.position</field>
-            <field name="domain"
-                eval="[('parent', '=', None)]"
-                pyson="1"/>
+            <field name="domain" eval="[('parent', '=', None)]" pyson="1"/>
         </record>
         <record model="ir.action.act_window.view" id="act_position_tree_view1">
             <field name="sequence" eval="10"/>
@@ -375,18 +343,6 @@ the full copyright notices and license terms. -->
         <record model="ir.action.act_window.view" id="act_position_tree_view2">
             <field name="sequence" eval="20"/>
             <field name="view" ref="position_view_form"/>
-            <field name="act_window" ref="act_position_tree"/>
-        </record>
-
-        <record model="ir.action.act_window.domain" id="act_position_tree_domain_all">
-            <field name="name">Positions</field>
-            <field name="sequence" eval="10"/>
-            <field name="domain"
-                eval="[('parent', '=', None),
-                  If (Eval('context', {}).get('company', False),
-                    ('department.company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
-                    ('department', '!=', None))]"
-                pyson="1"/>
             <field name="act_window" ref="act_position_tree"/>
         </record>
 
@@ -408,17 +364,6 @@ the full copyright notices and license terms. -->
             <field name="act_window" ref="act_position_list"/>
         </record>
 
-        <record model="ir.action.act_window.domain" id="act_position_list_domain_all">
-            <field name="name">Positions</field>
-            <field name="sequence" eval="10"/>
-            <field name="domain"
-                eval="[If (Eval('context', {}).get('company', False),
-                  ('department.company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
-                  ('department', '!=', None))]"
-                pyson="1"/>
-            <field name="act_window" ref="act_position_list"/>
-        </record>
-
         <menuitem parent="menu_position_tree" action="act_position_list"
             id="menu_position_list"/>
 
@@ -427,15 +372,16 @@ the full copyright notices and license terms. -->
             <field name="inherit" ref="company.employee_view_form"/>
             <field name="name">employee_form</field>
         </record>
-        <record model="ir.action.act_window.domain" id="act_employee_domain_all">
-            <field name="name">Employees</field>
-            <field name="sequence" eval="10"/>
-            <field name="domain"
-                eval="[If (Eval('context', {}).get('company', False),
-                  ('company.parent', 'child_of', [Eval('context', {}).get('company', None)]),
-                  ('company', '!=', None))]"
-                pyson="1"/>
-            <field name="act_window" ref="company.act_employee_form"/>
+
+        <record model="ir.ui.view" id="contract_view_form">
+            <field name="model">rrhh.contract</field>
+            <field name="type">form</field>
+            <field name="name">contracts_form</field>
+        </record>
+        <record model="ir.ui.view" id="contract_view_tree">
+            <field name="model">rrhh.contract</field>
+            <field name="type">tree</field>
+            <field name="name">contracts_tree</field>
         </record>
 
         <menuitem name="Employees" id="menu_employee" sequence="20" action="company.act_employee_form"

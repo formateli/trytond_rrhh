@@ -30,6 +30,10 @@ msgctxt "field:company.employee,documents:"
 msgid "Documents"
 msgstr "Documentos"
 
+msgctxt "field:company.employee,contracts:"
+msgid "Contracts"
+msgstr "Contratos"
+
 msgctxt "field:company.employee,gender:"
 msgid "Gender"
 msgstr "Género"
@@ -69,6 +73,34 @@ msgstr "Calificación"
 msgctxt "field:company.employee,residence:"
 msgid "Country of residence"
 msgstr "País de Residencia"
+
+msgctxt "field:rrhh.contract,employee:"
+msgid "Employee"
+msgstr "Empleado"
+
+msgctxt "field:rrhh.contract,type:"
+msgid "Type"
+msgstr "Tipo"
+
+msgctxt "field:rrhh.contract,payment_type:"
+msgid "Payment type"
+msgstr "Tipo de Pago"
+
+msgctxt "field:rrhh.contract,start_date:"
+msgid "Start date"
+msgstr "Fecha inicio"
+
+msgctxt "field:rrhh.contract,end_date:"
+msgid "End date"
+msgstr "Fecha fin"
+
+msgctxt "field:rrhh.contract,conditions:"
+msgid "Conditions"
+msgstr "Condiciones"
+
+msgctxt "field:rrhh.contract,active:"
+msgid "Active"
+msgstr "Activo"
 
 msgctxt "field:rrhh.contract.type,company:"
 msgid "Company"
