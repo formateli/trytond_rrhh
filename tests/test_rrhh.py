@@ -38,6 +38,7 @@ def create_employee(name):
     Department = pool.get('rrhh.department')
     Position = pool.get('rrhh.position')
     ContractType = pool.get('rrhh.contract.type')
+    Contract = pool.get('rrhh.contract')
     PaymentType = pool.get('rrhh.payment.type')
     InstructionLevel = pool.get('rrhh.instruction.level')
 
@@ -50,10 +51,12 @@ def create_employee(name):
         )
     party.save()
 
-    department = Department(name='Department')
+    main_department = Department(name='Main Department')
+    main_department.save()
+    department = Department(name='Department', parent=main_department)
     department.save()
 
-    position = Position(name='Position', department=department)
+    position = Position(name='Position')
     position.save()
 
     contract_type = ContractType(name='Full Time')
@@ -66,9 +69,7 @@ def create_employee(name):
         party=party,
         start_date=datetime.date(year=2020, month=1, day=1),
         position=position,
-        contract_type=contract_type,
-        payment_type=PaymentType.search([
-            ('name', '=', 'ACH')])[0],
+        department=department,
         instruction_level=InstructionLevel.search([
             ('name', '=', 'University')])[0],
         birth_country=country,

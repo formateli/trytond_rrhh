@@ -134,10 +134,6 @@ msgctxt "field:rrhh.department,parent:"
 msgid "Parent"
 msgstr "Padre"
 
-msgctxt "field:rrhh.department,positions:"
-msgid "Positions"
-msgstr "Posiciones"
-
 msgctxt "field:rrhh.dependent,age:"
 msgid "Age"
 msgstr "Edad"
@@ -234,14 +230,6 @@ msgctxt "field:rrhh.position,active:"
 msgid "Active"
 msgstr "Activo"
 
-msgctxt "field:rrhh.position,childs:"
-msgid "Children"
-msgstr "Hijos"
-
-msgctxt "field:rrhh.position,department:"
-msgid "Department"
-msgstr "Departamento"
-
 msgctxt "field:rrhh.position,description:"
 msgid "Description"
 msgstr "Descripción"
@@ -249,10 +237,6 @@ msgstr "Descripción"
 msgctxt "field:rrhh.position,name:"
 msgid "Name"
 msgstr "Nombre"
-
-msgctxt "field:rrhh.position,parent:"
-msgid "Parent"
-msgstr "Padre"
 
 msgctxt "field:rrhh.qualification,degree:"
 msgid "Degree"
@@ -326,11 +310,7 @@ msgctxt "model:ir.action,name:act_payment_type_form"
 msgid "Payment type"
 msgstr "Tipo de Pago"
 
-msgctxt "model:ir.action,name:act_position_list"
-msgid "Positions"
-msgstr "Posiciones"
-
-msgctxt "model:ir.action,name:act_position_tree"
+msgctxt "model:ir.action,name:act_position_form"
 msgid "Positions"
 msgstr "Posiciones"
 
@@ -356,14 +336,6 @@ msgstr "Departamentos"
 msgctxt "model:ir.action.act_window.domain,name:act_employee_domain_all"
 msgid "Employees"
 msgstr "Empleados"
-
-msgctxt "model:ir.action.act_window.domain,name:act_position_list_domain_all"
-msgid "Positions"
-msgstr "Posiciones"
-
-msgctxt "model:ir.action.act_window.domain,name:act_position_tree_domain_all"
-msgid "Positions"
-msgstr "Posiciones"
 
 msgctxt "model:ir.ui.menu,name:menu_configuration"
 msgid "Configuration"
@@ -404,14 +376,6 @@ msgstr "Empresa"
 msgctxt "model:ir.ui.menu,name:menu_payment_type"
 msgid "Payment types"
 msgstr "Tipos de Pago"
-
-msgctxt "model:ir.ui.menu,name:menu_position_list"
-msgid "Positions"
-msgstr "Posiciones"
-
-msgctxt "model:ir.ui.menu,name:menu_position_tree"
-msgid "Positions"
-msgstr "Posiciones"
 
 msgctxt "model:ir.ui.menu,name:menu_qualification_degree"
 msgid "Qualifications degrees"
@@ -548,10 +512,6 @@ msgstr "Efectivo"
 msgctxt "model:rrhh.payment.type,name:payment_type_check"
 msgid "Check"
 msgstr "Cheque"
-
-msgctxt "model:rrhh.position,name:"
-msgid "Company Position"
-msgstr "Posición en la Empresa"
 
 msgctxt "model:rrhh.qualification,name:"
 msgid "Qualification"

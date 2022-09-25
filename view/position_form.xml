@@ -7,11 +7,6 @@ the full copyright notices and license terms. -->
     <field name="name"/>
     <label name="active"/>
     <field name="active"/>
-    <label name="department"/>
-    <field name="department"/>
-    <label name="parent"/>
-    <field name="parent"/>
-    <newline/>
     <label name="description"/>
     <field name="description" colspan="3"/>
 </form>

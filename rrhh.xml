@@ -309,63 +309,37 @@ the full copyright notices and license terms. -->
         </record>
 
         <menuitem parent="menu_department_tree" action="act_department_list"
-            id="menu_department_list"/>
+		id="menu_department_list"/>
 
-        <record model="ir.ui.view" id="position_view_list">
-            <field name="model">rrhh.position</field>
-            <field name="type">tree</field>
-            <field name="priority" eval="10"/>
-            <field name="name">position_list</field>
-        </record>
-        <record model="ir.ui.view" id="position_view_tree">
-            <field name="model">rrhh.position</field>
-	    <field name="type">tree</field>
-            <field name="priority" eval="20"/>
-            <field name="field_childs">childs</field>
-            <field name="name">position_tree</field>
-        </record>
         <record model="ir.ui.view" id="position_view_form">
             <field name="model">rrhh.position</field>
             <field name="type">form</field>
             <field name="name">position_form</field>
         </record>
-
-        <record model="ir.action.act_window" id="act_position_tree">
+        <record model="ir.ui.view" id="position_view_tree">
+            <field name="model">rrhh.position</field>
+            <field name="type">tree</field>
+            <field name="name">position_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_position_form">
             <field name="name">Positions</field>
             <field name="res_model">rrhh.position</field>
-            <field name="domain" eval="[('parent', '=', None)]" pyson="1"/>
+            <field name="search_value"></field>
         </record>
-        <record model="ir.action.act_window.view" id="act_position_tree_view1">
+        <record model="ir.action.act_window.view" id="act_position_form_view1">
             <field name="sequence" eval="10"/>
             <field name="view" ref="position_view_tree"/>
-            <field name="act_window" ref="act_position_tree"/>
+            <field name="act_window" ref="act_position_form"/>
         </record>
-        <record model="ir.action.act_window.view" id="act_position_tree_view2">
+        <record model="ir.action.act_window.view" id="act_position_form_view2">
             <field name="sequence" eval="20"/>
             <field name="view" ref="position_view_form"/>
-            <field name="act_window" ref="act_position_tree"/>
+            <field name="act_window" ref="act_position_form"/>
         </record>
 
-        <menuitem parent="menu_organization" action="act_position_tree"
-            id="menu_position_tree"  sequence="20" />
-
-        <record model="ir.action.act_window" id="act_position_list">
-            <field name="name">Positions</field>
-            <field name="res_model">rrhh.position</field>
-        </record>
-        <record model="ir.action.act_window.view" id="act_position_list_view1">
-            <field name="sequence" eval="10"/>
-            <field name="view" ref="position_view_list"/>
-            <field name="act_window" ref="act_position_list"/>
-        </record>
-        <record model="ir.action.act_window.view" id="act_position_list_view2">
-            <field name="sequence" eval="20"/>
-            <field name="view" ref="position_view_form"/>
-            <field name="act_window" ref="act_position_list"/>
-        </record>
-
-        <menuitem parent="menu_position_tree" action="act_position_list"
-            id="menu_position_list"/>
+        <menuitem id="menu_position_tree"
+            sequence="20" action="act_position_form"
+            parent="menu_organization"/>
 
         <record model="ir.ui.view" id="employee_view_form">
             <field name="model">company.employee</field>

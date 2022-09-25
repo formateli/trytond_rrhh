@@ -13,11 +13,12 @@ class Employee(metaclass=PoolMeta):
     __name__ = 'company.employee'
     photo = fields.Binary('Photo', file_id='photo_id')
     photo_id = fields.Char('Photo id', states={'invisible': True})
-    position = fields.Many2One('rrhh.position', 'Position', required=True,
-        domain=[('department.company', '=', Eval('company'))],
-        depends=['company'])
-    department = fields.Function(fields.Char('Department'),
-        'on_change_with_department')
+    position = fields.Many2One('rrhh.position', 'Position', required=True)
+    department = fields.Many2One('rrhh.department', 'Department',
+        required=True,
+        domain=[
+            ('company', '=', Eval('company'))
+        ], depends=['company'])
     instruction_level = fields.Many2One('rrhh.instruction.level',
         'Instruction level', required=True)
     documents = fields.One2Many('rrhh.document', 'employee', 'Documents')
@@ -92,11 +93,6 @@ class Employee(metaclass=PoolMeta):
         if self.party and self.birth_date:
             return self.compute_age(self.birth_date)
 
-    @fields.depends('position')
-    def on_change_with_department(self, name=None):
-        if self.position:
-            return self.position.department.name
-
     @fields.depends('party')
     def on_change_with_marital_status(self, name=None):
         return self._get_party_selection_string('person_legal_state')
@@ -131,7 +127,7 @@ class Employee(metaclass=PoolMeta):
 
     @fields.depends('position')
     def on_change_company(self):
-        self.position = None
+        self.department = None
 
 
 class Dependent(ModelSQL, ModelView):
@@ -177,16 +173,15 @@ class Department(tree(separator=' / '), ModelSQL, ModelView):
     name = fields.Char('Name', required=True, translate=True)
     parent = fields.Many2One('rrhh.department', 'Parent', select=True,
         domain=[
-            ('id', '!=', Eval('id')),        
+            ('id', '!=', Eval('id', -1)),
             If(Bool(Eval('company')),
                 ('company', '=', Eval('company')),
-                ('company', '=', None)
+                ('company', '=', -1)
                 ),
-        ], depends=['id', 'company'])
+        ],
+        depends=['id', 'company'])
     childs = fields.One2Many('rrhh.department', 'parent',
         'Children', readonly=True)
-    positions = fields.One2Many('rrhh.position', 'department',
-        'Positions', readonly=True)
     active = fields.Boolean('Active')
 
     @staticmethod
@@ -198,42 +193,16 @@ class Department(tree(separator=' / '), ModelSQL, ModelView):
         return Transaction().context.get('company')
 
 
-class Position(tree(separator=' / '), ModelSQL, ModelView):
+class Position(ModelSQL, ModelView):
     'Company Position'
     __name__ = 'rrhh.position'
     name = fields.Char('Name', required=True, translate=True)
-    department = fields.Many2One('rrhh.department',
-        'Department', required=True)
-    parent = fields.Many2One('rrhh.position', 'Parent', select=True,
-        domain=[
-            ('id', '!=', Eval('id')),        
-            If(Bool(Eval('department')),
-                ('department', '=', Eval('department')),
-                ('department', '=', None)
-                ),
-        ], depends=['id', 'department'])
-    childs = fields.One2Many('rrhh.position', 'parent',
-        'Children', readonly=True)
     description = fields.Text('Description')
     active = fields.Boolean('Active')
 
     @staticmethod
     def default_active():
         return True
-
-    @fields.depends()
-    def on_change_department(self):
-        self.parent = None
-
-    def get_rec_name(self, name):
-        return self.department.name + ' / ' + self.name
-
-    @classmethod
-    def search_rec_name(cls, name, clause):
-        domain = ['OR']
-        domain.append(('department.name', clause[1], clause[2]))
-        domain.append(('name', clause[1], clause[2]))
-        return domain
 
 
 class InstructionLevel(ModelSQL, ModelView):
