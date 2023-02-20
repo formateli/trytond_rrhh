@@ -168,10 +168,9 @@ class Department(tree(separator=' / '), ModelSQL, ModelView):
         domain=[
             ('id', If(Eval('context', {}).contains('company'), '=', '!='),
                 Eval('context', {}).get('company', -1)),
-            ],
-        select=True)
+            ])
     name = fields.Char('Name', required=True, translate=True)
-    parent = fields.Many2One('rrhh.department', 'Parent', select=True,
+    parent = fields.Many2One('rrhh.department', 'Parent',
         domain=[
             ('id', '!=', Eval('id', -1)),
             If(Bool(Eval('company')),
@@ -298,7 +297,7 @@ class ContractType(ModelSQL, ModelView):
         domain=[
             ('id', If(Eval('context', {}).contains('company'), '=', '!='),
                 Eval('context', {}).get('company', -1)),
-            ], select=True)
+            ])
     name = fields.Char('Name', required=True, translate=True)
     conditions = fields.Text('Conditions')
 
