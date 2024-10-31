@@ -13,6 +13,4 @@ the full copyright notices and license terms. -->
     <field name="parent"/>
     <newline/>
     <field name="childs" colspan="4"/>
-    <newline/>
-    <field name="positions" colspan="4"/>
 </form>

@@ -42,12 +42,9 @@ the full copyright notices and license terms. -->
                 <field name="department"/>
                 <label name="supervisor"/>
                 <field name="supervisor"/>
-                <label name="contract_type"/>
-                <field name="contract_type"/>
-                <label name="payment_type"/>
-                <field name="payment_type"/>
-                <newline/>
-                <field name="subordinates" colspan="4"/>
+		<newline/>
+                <field name="contracts" colspan="4"/>
+		<field name="subordinates" colspan="4"/>
             </page>
             <page string="Documents" col="4" id="documents">
                 <field name="documents" colspan="4"/>

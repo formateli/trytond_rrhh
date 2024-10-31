@@ -18,5 +18,6 @@ def register():
         rrhh.QualificationDegree,
         rrhh.Qualification,
         rrhh.ContractType,
+        rrhh.Contract,
         rrhh.PaymentType,
         module='rrhh', type_='model')
