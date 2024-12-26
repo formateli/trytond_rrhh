@@ -5,7 +5,7 @@ the full copyright notices and license terms. -->
 <tryton>
     <data>
         <record model="ir.model.access" id="access_company_employee_employee">
-            <field name="model" search="[('model', '=', 'company.employee')]"/>
+		<field name="model">company.employee</field>
             <field name="group" ref="rrhh.group_rrhh_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -13,7 +13,7 @@ the full copyright notices and license terms. -->
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_company_employee">
-            <field name="model" search="[('model', '=', 'company.employee')]"/>
+		<field name="model">company.employee</field>
             <field name="group" ref="rrhh.group_rrhh"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -22,14 +22,14 @@ the full copyright notices and license terms. -->
         </record>
 
         <record model="ir.model.access" id="access_rrhh_document">
-            <field name="model" search="[('model', '=', 'rrhh.document')]"/>
+		<field name="model">rrhh.document</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_document_admin">
-            <field name="model" search="[('model', '=', 'rrhh.document')]"/>
+		<field name="model">rrhh.document</field>
             <field name="group" ref="rrhh.group_rrhh_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -37,7 +37,7 @@ the full copyright notices and license terms. -->
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_document_user">
-            <field name="model" search="[('model', '=', 'rrhh.document')]"/>
+		<field name="model">rrhh.document</field>
             <field name="group" ref="rrhh.group_rrhh"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -46,14 +46,14 @@ the full copyright notices and license terms. -->
         </record>
 
         <record model="ir.model.access" id="access_rrhh_document_type">
-            <field name="model" search="[('model', '=', 'rrhh.document.type')]"/>
+		<field name="model">rrhh.document.type</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_document_type_admin">
-            <field name="model" search="[('model', '=', 'rrhh.document.type')]"/>
+		<field name="model">rrhh.document.type</field>
             <field name="group" ref="rrhh.group_rrhh_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -61,7 +61,7 @@ the full copyright notices and license terms. -->
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_document_type_user">
-            <field name="model" search="[('model', '=', 'rrhh.document.type')]"/>
+		<field name="model">rrhh.document.type</field>
             <field name="group" ref="rrhh.group_rrhh"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -70,14 +70,14 @@ the full copyright notices and license terms. -->
         </record>
 
         <record model="ir.model.access" id="access_rrhh_instruction_level">
-            <field name="model" search="[('model', '=', 'rrhh.instruction.level')]"/>
+		<field name="model">rrhh.instruction.level</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_instruction_level_admin">
-            <field name="model" search="[('model', '=', 'rrhh.instruction.level')]"/>
+		<field name="model">rrhh.instruction.level</field>
             <field name="group" ref="rrhh.group_rrhh_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -85,7 +85,7 @@ the full copyright notices and license terms. -->
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_instruction_level_user">
-            <field name="model" search="[('model', '=', 'rrhh.instruction.level')]"/>
+		<field name="model">rrhh.instruction.level</field>
             <field name="group" ref="rrhh.group_rrhh"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -94,14 +94,14 @@ the full copyright notices and license terms. -->
         </record>
 
         <record model="ir.model.access" id="access_rrhh_dependent">
-            <field name="model" search="[('model', '=', 'rrhh.dependent')]"/>
+		<field name="model">rrhh.dependent</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_dependent_admin">
-            <field name="model" search="[('model', '=', 'rrhh.dependent')]"/>
+		<field name="model">rrhh.dependent</field>
             <field name="group" ref="rrhh.group_rrhh_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -109,7 +109,7 @@ the full copyright notices and license terms. -->
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_dependent_user">
-            <field name="model" search="[('model', '=', 'rrhh.dependent')]"/>
+		<field name="model">rrhh.dependent</field>
             <field name="group" ref="rrhh.group_rrhh"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -118,14 +118,14 @@ the full copyright notices and license terms. -->
         </record>
 
         <record model="ir.model.access" id="access_rrhh_dependent_relation">
-            <field name="model" search="[('model', '=', 'rrhh.dependent.relation')]"/>
+		<field name="model">rrhh.dependent.relation</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_dependent_relation_admin">
-            <field name="model" search="[('model', '=', 'rrhh.dependent.relation')]"/>
+		<field name="model">rrhh.dependent.relation</field>
             <field name="group" ref="rrhh.group_rrhh_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -133,7 +133,7 @@ the full copyright notices and license terms. -->
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_dependent_relation_user">
-            <field name="model" search="[('model', '=', 'rrhh.dependent.relation')]"/>
+		<field name="model">rrhh.dependent.relation</field>
             <field name="group" ref="rrhh.group_rrhh"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -142,14 +142,14 @@ the full copyright notices and license terms. -->
         </record>
 
         <record model="ir.model.access" id="access_rrhh_qualification">
-            <field name="model" search="[('model', '=', 'rrhh.qualification')]"/>
+		<field name="model">rrhh.qualification</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_qualification_admin">
-            <field name="model" search="[('model', '=', 'rrhh.qualification')]"/>
+		<field name="model">rrhh.qualification</field>
             <field name="group" ref="rrhh.group_rrhh_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -157,7 +157,7 @@ the full copyright notices and license terms. -->
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_qualification_user">
-            <field name="model" search="[('model', '=', 'rrhh.qualification')]"/>
+		<field name="model">rrhh.qualification</field>
             <field name="group" ref="rrhh.group_rrhh"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -166,14 +166,14 @@ the full copyright notices and license terms. -->
         </record>
 
         <record model="ir.model.access" id="access_rrhh_qualification_degree">
-            <field name="model" search="[('model', '=', 'rrhh.qualification.degree')]"/>
+		<field name="model">rrhh.qualification.degree</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_qualification_degree_admin">
-            <field name="model" search="[('model', '=', 'rrhh.qualification.degree')]"/>
+		<field name="model">rrhh.qualification.degree</field>
             <field name="group" ref="rrhh.group_rrhh_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -181,7 +181,7 @@ the full copyright notices and license terms. -->
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_qualification_degree_user">
-            <field name="model" search="[('model', '=', 'rrhh.qualification.degree')]"/>
+		<field name="model">rrhh.qualification.degree</field>
             <field name="group" ref="rrhh.group_rrhh"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -190,14 +190,14 @@ the full copyright notices and license terms. -->
         </record>
 
         <record model="ir.model.access" id="access_rrhh_contract_type">
-            <field name="model" search="[('model', '=', 'rrhh.contract.type')]"/>
+		<field name="model">rrhh.contract.type</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_contract_type_admin">
-            <field name="model" search="[('model', '=', 'rrhh.contract.type')]"/>
+		<field name="model">rrhh.contract.type</field>
             <field name="group" ref="rrhh.group_rrhh_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -205,7 +205,7 @@ the full copyright notices and license terms. -->
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_contract_type_user">
-            <field name="model" search="[('model', '=', 'rrhh.contract.type')]"/>
+		<field name="model">rrhh.contract.type</field>
             <field name="group" ref="rrhh.group_rrhh"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -214,14 +214,14 @@ the full copyright notices and license terms. -->
         </record>
 
         <record model="ir.model.access" id="access_rrhh_department">
-            <field name="model" search="[('model', '=', 'rrhh.department')]"/>
+		<field name="model">rrhh.department</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_department_admin">
-            <field name="model" search="[('model', '=', 'rrhh.department')]"/>
+		<field name="model">rrhh.department</field>
             <field name="group" ref="rrhh.group_rrhh_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -229,7 +229,7 @@ the full copyright notices and license terms. -->
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_department_user">
-            <field name="model" search="[('model', '=', 'rrhh.department')]"/>
+		<field name="model">rrhh.department</field>
             <field name="group" ref="rrhh.group_rrhh"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -238,14 +238,14 @@ the full copyright notices and license terms. -->
         </record>
 
         <record model="ir.model.access" id="access_rrhh_position">
-            <field name="model" search="[('model', '=', 'rrhh.position')]"/>
+		<field name="model">rrhh.position</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_position_admin">
-            <field name="model" search="[('model', '=', 'rrhh.position')]"/>
+		<field name="model">rrhh.position</field>
             <field name="group" ref="rrhh.group_rrhh_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -253,7 +253,7 @@ the full copyright notices and license terms. -->
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_position_user">
-            <field name="model" search="[('model', '=', 'rrhh.position')]"/>
+		<field name="model">rrhh.position</field>
             <field name="group" ref="rrhh.group_rrhh"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -262,14 +262,14 @@ the full copyright notices and license terms. -->
         </record>
 
         <record model="ir.model.access" id="access_rrhh_payment_type">
-            <field name="model" search="[('model', '=', 'rrhh.payment.type')]"/>
+		<field name="model">rrhh.payment.type</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_payment_type_admin">
-            <field name="model" search="[('model', '=', 'rrhh.payment.type')]"/>
+		<field name="model">rrhh.payment.type</field>
             <field name="group" ref="rrhh.group_rrhh_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -277,7 +277,7 @@ the full copyright notices and license terms. -->
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_rrhh_payment_type_user">
-            <field name="model" search="[('model', '=', 'rrhh.payment.type')]"/>
+		<field name="model">rrhh.payment.type</field>
             <field name="group" ref="rrhh.group_rrhh"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
