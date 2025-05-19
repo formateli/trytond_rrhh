@@ -5,7 +5,6 @@ the full copyright notices and license terms. -->
 <form>
     <label name="name"/>
     <field name="name"/>
-    <newline/>
     <label name="active"/>
     <field name="active"/>
 </form>
