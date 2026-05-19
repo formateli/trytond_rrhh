@@ -273,6 +273,7 @@ class Qualification(ModelSQL, ModelView):
         super(Qualification, cls).__setup__()
         cls._order = [
             ('type', 'DESC'),
+            ('id', 'DESC')
             ]
 
 
